@@ -1,4 +1,3 @@
-@section('container')
-<div id="cabecalho">
-    
+<div class="cabecalho">
+    <img></img>
 </div>
