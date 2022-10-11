@@ -25,3 +25,7 @@ body{
     color: #ff6100;
     font-size: 2rem;
 }
+
+.botao:hover{
+    cursor: pointer;
+}

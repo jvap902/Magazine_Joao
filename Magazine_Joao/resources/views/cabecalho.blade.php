@@ -10,10 +10,10 @@
             ])
         </div>
         <div class="col-1">
-            <i class="bi bi-person laranja"></i>
+            <i class="bi bi-person laranja botao"></i>
         </div>
         <div class="col-1">
-            <i class="bi bi-cart-fill laranja"></i>
+            <i class="bi bi-cart-fill laranja botao"></i>
         </div>
     </div>
 </div>
