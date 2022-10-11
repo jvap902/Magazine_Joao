@@ -31,8 +31,8 @@ class UsuarioController extends Controller
             // Se um dos campos não for preenchidos, nem tenta o login e volta
             // para a página anterior
             $credenciais = $form->validate([
-                'username' => ['required'],
-                'password' => ['required'],
+                'email' => ['required'],
+                'senha' => ['required'],
             ]);
 
             // Tenta o login
