@@ -40,6 +40,7 @@ class UsuarioController extends Controller
             // Tenta o login
             if (Auth::attempt($credenciais)) {
                 session()->regenerate();
+                return "ok";
                 return redirect()->route('home');
             } else {
                 return redirect()->route('login')->with(
