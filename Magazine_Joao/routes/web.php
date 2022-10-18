@@ -19,6 +19,11 @@ use App\Http\Controllers\UsuarioController;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/categorias', [CategoriaController::class, 'index']);
+Route::get('/categorias/create', [CategoriaController::class, 'create']);
+Route::post('/categorias/store', [CategoriaController::class, 'store']);
+Route::get('/categorias/edit', [CategoriaController::class, 'edit']);
+Route::post('/categorias/update/{cat}', [CategoriaController::class, 'update']); //cat é id
 
+Route::get('/usuario/', [UsuarioController::class, 'index']);
 Route::get('/usuario/login', [UsuarioController::class, 'login']);
 Route::post('/usuario/store', [UsuarioController::class, 'store']);
