@@ -4,11 +4,8 @@
 <body>
 
     @include('cabecalho')
-
-    
-        @yield('container')
-   
-
+    @include('barra')
+    @include('cards')
     @include('base.footer')
 
 </body>

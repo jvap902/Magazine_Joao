@@ -4,8 +4,10 @@ body{
 .cabecalho{
     background-color: rgb(0, 0, 0);
 }
-.cor{
-    color: aqua;
+.barra{
+    background-color: #ff6100;
+    height: 2rem;
+    border: none;
 }
 
 .pesquisa_cabecalho{
@@ -14,7 +16,7 @@ body{
     border-radius: 4px;
     height: 2rem;
     outline: none;
-    width: 50rem;
+    width: 100%;
 }
 
 .logo{
@@ -28,4 +30,34 @@ body{
 
 .botao:hover{
     cursor: pointer;
+}
+
+.mr-1{
+    margin-right: 1rem;
+}
+
+.font-size-20{
+    font-size: 20px;
+}
+
+.font-size-25{
+    font-size: 25px;
+}
+
+.btn-laranja{
+    border: none;
+    background-color: #ff6100;
+}
+
+.card-body{
+    background-color: #ff6100;
+}
+
+.m05{
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.padding-7{
+    padding-top: 7px;
 }

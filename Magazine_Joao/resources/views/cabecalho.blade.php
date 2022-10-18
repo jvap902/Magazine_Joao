@@ -9,11 +9,9 @@
             'placeholder' => 'Pesquisar...'
             ])
         </div>
-        <div class="col-1">
-            <i class="bi bi-person laranja botao"></i>
-        </div>
-        <div class="col-1">
-            <i class="bi bi-cart-fill laranja botao"></i>
+        <div class="col-2 text-end">
+            <i class="bi bi-person laranja botao mr-1"></i>
+            <i class="bi bi-cart-fill laranja botao mr-1"></i>
         </div>
     </div>
 </div>
