@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("nome");
             $table->string("marca");
+            $table->string("descricao");
             $table->integer("estoque");
             $table->float("preco");
             $table->foreignId('categoria_id')->constrained('categorias');

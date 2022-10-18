@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('produtos_filho', function (Blueprint $table) {
             $table->id();
             $table->foreignId("id_pai")->constrained("produtos");
-            $table->string("descricao");
+            $table->string("variacao");
             $table->integer("estoque");
             $table->timestamps();
         });

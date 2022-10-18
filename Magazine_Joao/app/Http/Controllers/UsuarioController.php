@@ -13,6 +13,8 @@ class UsuarioController extends Controller
     function index(Request $request)
     {
 
+        dd(csrf_token());
+
         $id = null; //ver como o id será pego
 
         $usuario = Usuario::select('nome', 'email', 'senha')
@@ -38,6 +40,7 @@ class UsuarioController extends Controller
             // Tenta o login
             if (Auth::attempt($credenciais)) {
                 session()->regenerate();
+                return "ok";
                 return redirect()->route('home');
             } else {
                 return redirect()->route('login')->with(
@@ -56,17 +59,18 @@ class UsuarioController extends Controller
 
     function store(Request $request)
     {
-        $data = $request->all();
+        $data = $request->validate([
+            'nome' => 'required|max:255',
+            'email' => 'required|unique:usuarios',
+            'senha' => 'required|min_digits:8',
+            'CPF' => 'required|unique:usuarios',
+        ]);
 
-        DB::insert(
-            "INSERT INTO usuarios(nome, email, senha) values(:nome, :email, :senha);",
-            [
-                'nome' => $data['nome'],
-                'email' => $data['email'],
-                'senha' => Hash::make($data['senha'])
-            ]
-        );
+        $data['senha'] = Hash::make($data['senha']);
 
-        return redirect('/usuario');
+        Usuario::create($data);
+
+        return "ok";
+        // return redirect('/usuario');
     }
 }

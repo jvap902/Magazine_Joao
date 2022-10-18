@@ -9,11 +9,6 @@ class Categoria extends Model
 {
     use HasFactory;
 
-    protected $table = "categorias";
-    protected $primaryKey = "id";
-    protected $keyType = "int";
-    public $incrementing = true;
-
     protected $fillable = [
         "nome",
     ];
