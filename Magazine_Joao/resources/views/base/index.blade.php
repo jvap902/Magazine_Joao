@@ -5,6 +5,7 @@
 
     @include('cabecalho')
     @include('barra')
+    @include('modal')
     @include('cards')
     @include('base.footer')
 

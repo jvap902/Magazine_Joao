@@ -32,12 +32,17 @@
                 'nome' => 'Shape do Inácio',
                 'preco' => '00.99',
                 'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto7' => [
+                'nome' => 'Veganismo da Jeni',
+                'preco' => '99.99',
+                'imagem' => asset('img/Magazine João.png')
             ]
         ]
         @endphp
         @foreach ($produtos as $produto)
         <div class="col-2 card float-start">
-            <img src={{$produto['imagem']}} class="card-img-top">
+            <img src="{{$produto['imagem']}}" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">{{$produto['nome']}}</h5>
                 <a href="#" class="btn btn-laranja float-start"><i class="bi bi-cart-plus-fill font-size-25"></i></a>

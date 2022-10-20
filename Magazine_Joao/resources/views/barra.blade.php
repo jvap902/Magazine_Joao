@@ -6,14 +6,15 @@
         @for ($i=0; $i<'11'; $i++)
             <div class="col text-center font-size-12">
                 @if ($i == 0)
-                    <i class="bi bi-list text-dark"></i>
-                @endif
-                @if ($i>6)
-                    <button id='{{ $categorias[$i] }}' class="btn-laranja .d-md-none .d-lg-block">{{ $categorias[$i] }}</button>
-                @elseif ($i>3)
-                    <button id='{{ $categorias[$i] }}' class="btn-laranja .d-sm-none .d-md-block">{{ $categorias[$i] }}</button>
+                    <button id='menu' class="btn-laranja .d-md-none .d-lg-block"><i class="menu bi bi-list text-dark"></i>Menu</button>
                 @else
-                    <button id='{{ $categorias[$i] }}' class="btn-laranja">{{ $categorias[$i] }}</button>
+                    @if ($i>6)
+                        <button id='{{ $categorias[$i] }}' class="btn-laranja .d-md-none .d-lg-block">{{ $categorias[$i] }}</button>
+                    @elseif ($i>3)
+                        <button id='{{ $categorias[$i] }}' class="btn-laranja .d-sm-none .d-md-block">{{ $categorias[$i] }}</button>
+                    @else
+                        <button id='{{ $categorias[$i] }}' class="btn-laranja">{{ $categorias[$i] }}</button>
+                    @endif
                 @endif
             </div>    
         @endfor
