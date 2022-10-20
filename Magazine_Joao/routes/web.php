@@ -24,9 +24,12 @@ Route::get('/categorias/create', [CategoriaController::class, 'create']);
 Route::post('/categorias/store', [CategoriaController::class, 'store']);
 Route::get('/categorias/edit', [CategoriaController::class, 'edit']);
 Route::post('/categorias/update/{cat}', [CategoriaController::class, 'update']); //cat é id
+Route::delete('/categorias/delete/{cat}', [CategoriaController::class, 'destroy']);
 
 Route::get('/usuario/', [UsuarioController::class, 'index']);
 Route::post('/usuario/login', [UsuarioController::class, 'login']);
 Route::post('/usuario/store', [UsuarioController::class, 'store']);
 
 Route::get('/produto/{id}', [ProdutoController::class, 'index']);
+Route::post('/produto/{produto}', [ProdutoController::class, 'update']); //produto é id | conferir rota
+// Route::delete('/produto/{produto}', [CategoriaController::class, 'destroy']); ajeitar rota
