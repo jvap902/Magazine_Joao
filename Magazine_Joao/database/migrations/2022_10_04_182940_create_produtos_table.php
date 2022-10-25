@@ -22,6 +22,7 @@ return new class extends Migration
             $table->float("preco");
             $table->foreignId('categoria_id')->constrained('categorias');
             $table->string("imagem"); //aqui vem o link para a imagem
+            $table->boolean("active")->default(1);
             $table->timestamps();
         });
     }

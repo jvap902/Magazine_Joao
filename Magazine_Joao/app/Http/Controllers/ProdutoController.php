@@ -28,19 +28,17 @@ class ProdutoController extends Controller
         return "ok";
     }
 
-    function destroy_filho(){
+    function destroy_filho(ProdutoFilho $produto_filho){
     }
 
-    function destroy(Produto $produto){
+    function deactivate(Produto $produto){
         try {
-            $produto_id = $produto->select("id")->first();
-
-            dd($produto_id);
-            $produto->delete();
+            $produto->update(['active' => 0]);
             return "ok";
-            return redirect ("/produto/$produto_id");
+            return redirect ("/");
         } catch (QueryException $e){
-            return "EEEEEE";
+            $produto_id = $produto->select("id")->first();
+            return "EEEEEE" . $e;
             return redirect("/produto/$produto_id")->with("erro", "Erro! Há produtos nesta categoria!");
         }
 

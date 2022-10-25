@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId("id_pai")->constrained("produtos");
             $table->string("variacao");
             $table->integer("estoque");
+            $table->boolean("active")->default(1);
             $table->timestamps();
         });
     }

@@ -32,4 +32,4 @@ Route::post('/usuario/store', [UsuarioController::class, 'store']);
 
 Route::get('/produto/{id}', [ProdutoController::class, 'index']);
 Route::post('/produto/{produto}', [ProdutoController::class, 'update']); //produto é id | conferir rota
-// Route::delete('/produto/{produto}', [CategoriaController::class, 'destroy']); ajeitar rota
+Route::post('/produto/{produto}', [ProdutoController::class, 'deactivate']);
