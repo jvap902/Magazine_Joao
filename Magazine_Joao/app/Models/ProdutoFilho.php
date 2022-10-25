@@ -14,5 +14,6 @@ class ProdutoFilho extends Model
         'id_pai',
         'estoque',
         'descricao',
+        "active"
     ];
 }
