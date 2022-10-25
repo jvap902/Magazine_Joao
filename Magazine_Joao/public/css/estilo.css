@@ -1,6 +1,9 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
+span{
+    cursor: pointer;
+}
 .cabecalho{
     background-color: rgb(0, 0, 0);
 }
@@ -33,6 +36,12 @@ body{
     background-color: #ff6100 !important;
 }
 
+.modalMenu{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 2px;
+}
+
 .botao:hover{
     cursor: pointer;
 }
@@ -56,6 +65,11 @@ body{
 .btn-laranja{
     border: none;
     background-color: #ff6100;
+}
+
+.btn-laranja-claro{
+    border: none;
+    background-color:rgb(255, 157, 92);
 }
 
 .card{
@@ -82,7 +96,24 @@ body{
     padding-top: 7px;
 }
 
-#myModal{
-    width: 50%;
-    margin-top: 8.4rem;
+#modalMenu{
+    width: 30%;
+    margin-left: 1%;
+}
+
+.borda-preta{
+    border: solid black 1px;
+}
+
+.btn-menu{
+    margin-top: 5%;
+    border-radius: 8px;
+}
+
+.sem-ponto{
+    list-style-type: none; 
+}
+
+.li-menu{
+    cursor: pointer;
 }

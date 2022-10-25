@@ -37,6 +37,156 @@
                 'nome' => 'Veganismo da Jeni',
                 'preco' => '99.99',
                 'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto8' => [
+                'nome' => 'Tênis Fedido do VAP',
+                'preco' => '00.01',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto9' => [
+                'nome' => 'Cabelo Abajur do João Ryan',
+                'preco' => '1000.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto10' => [
+                'nome' => 'Unhas ASMR Júlia',
+                'preco' => '12999.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto11' => [
+                'nome' => 'Paladar Infantil da Alyssa',
+                'preco' => '199.90',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto12' => [
+                'nome' => 'Shape do Inácio',
+                'preco' => '00.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto13' => [
+                'nome' => 'Veganismo da Jeni',
+                'preco' => '99.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto14' => [
+                'nome' => 'Tênis Fedido do VAP',
+                'preco' => '00.01',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto15' => [
+                'nome' => 'Cabelo Abajur do João Ryan',
+                'preco' => '1000.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto16' => [
+                'nome' => 'Unhas ASMR Júlia',
+                'preco' => '12999.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto17' => [
+                'nome' => 'Paladar Infantil da Alyssa',
+                'preco' => '199.90',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto18' => [
+                'nome' => 'Shape do Inácio',
+                'preco' => '00.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto19' => [
+                'nome' => 'Veganismo da Jeni',
+                'preco' => '99.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto20' => [
+                'nome' => 'Tênis Fedido do VAP',
+                'preco' => '00.01',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto21' => [
+                'nome' => 'Cabelo Abajur do João Ryan',
+                'preco' => '1000.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto22' => [
+                'nome' => 'Unhas ASMR Júlia',
+                'preco' => '12999.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto23' => [
+                'nome' => 'Paladar Infantil da Alyssa',
+                'preco' => '199.90',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto24' => [
+                'nome' => 'Shape do Inácio',
+                'preco' => '00.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto25' => [
+                'nome' => 'Veganismo da Jeni',
+                'preco' => '99.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto26' => [
+                'nome' => 'Tênis Fedido do VAP',
+                'preco' => '00.01',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto27' => [
+                'nome' => 'Cabelo Abajur do João Ryan',
+                'preco' => '1000.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto28' => [
+                'nome' => 'Unhas ASMR Júlia',
+                'preco' => '12999.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto29' => [
+                'nome' => 'Paladar Infantil da Alyssa',
+                'preco' => '199.90',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto30' => [
+                'nome' => 'Shape do Inácio',
+                'preco' => '00.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto31' => [
+                'nome' => 'Veganismo da Jeni',
+                'preco' => '99.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto32' => [
+                'nome' => 'Tênis Fedido do VAP',
+                'preco' => '00.01',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto33' => [
+                'nome' => 'Cabelo Abajur do João Ryan',
+                'preco' => '1000.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto34' => [
+                'nome' => 'Unhas ASMR Júlia',
+                'preco' => '12999.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto35' => [
+                'nome' => 'Paladar Infantil da Alyssa',
+                'preco' => '199.90',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto36' => [
+                'nome' => 'Shape do Inácio',
+                'preco' => '00.99',
+                'imagem' => asset('img/Magazine João.png')
+            ],
+            'produto37' => [
+                'nome' => 'Veganismo da Jeni',
+                'preco' => '99.99',
+                'imagem' => asset('img/Magazine João.png')
             ]
         ]
         @endphp
