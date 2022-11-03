@@ -1,5 +1,5 @@
 <div id="modalMenu" class="modal">
-  <div class="background-laranja modalMenu row">
+  <div class="background-laranja modal row">
     <div class="background-laranja modalMenuCategorias col">
     @php
         $categorias = ['Menu', 'Esportes', 'Arte', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'ooo']
@@ -10,9 +10,11 @@
     @endforeach
     </ul>
     </div>
+    {{-- @if (logado em adm) --}}
     <div class="background-laranja modalMenuAcoes col">
       <button class="btn-laranja-claro borda-preta btn-menu">Criar Categoria</button>
       <button class="btn-laranja-claro borda-preta btn-menu">Alterar/Excluir Categoria</button>
     </div>
+    {{-- @endif --}}
   </div>
 </div>

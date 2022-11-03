@@ -196,7 +196,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{$produto['nome']}}</h5>
                 <a href="#" class="btn btn-laranja float-start"><i class="bi bi-cart-plus-fill font-size-25"></i></a>
-                <h3 class="align-middle padding-7 float-end">R${{$produto['preco']}}</h3>
+                <h5 class="align-middle padding-16 float-end">R${{$produto['preco']}}</h5>
             </div>
         </div>
         @endforeach

@@ -23,6 +23,23 @@ span{
     width: 100%;
 }
 
+.login{
+    width: 70%;
+}
+
+.form{
+    width: 70%;
+}
+
+.input-form{
+    background-color: rgb(255, 157, 92);
+    border: none;
+    border-radius: 4px;
+    height: 2rem;
+    outline: none;
+    width: 100%;
+}
+
 .logo{
     height: 2rem;
 }
@@ -36,7 +53,15 @@ span{
     background-color: #ff6100 !important;
 }
 
-.modalMenu{
+.border-radius-6px{
+    border-radius: 6px;
+}
+
+.border-none{
+    border: none;
+}
+
+.modal{
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     padding: 2px;
@@ -92,8 +117,8 @@ span{
     margin-right: 0.5%;
 }
 
-.padding-7{
-    padding-top: 7px;
+.padding-16{
+    padding-top: 16px;
 }
 
 #modalMenu{
@@ -101,17 +126,30 @@ span{
     margin-left: 1%;
 }
 
+#modalUsuario{
+    width: 15%;
+}
+
 .borda-preta{
     border: solid black 1px;
+}
+
+.borda-laranja{
+    border: solid #ff6100 1px;
+}
+
+.borda-form{
+    border-radius: 8px;
 }
 
 .btn-menu{
     margin-top: 5%;
     border-radius: 8px;
+    width: 75%;
 }
 
 .sem-ponto{
-    list-style-type: none; 
+    list-style-type: none;
 }
 
 .li-menu{

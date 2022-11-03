@@ -16,7 +16,7 @@
                         <button id='{{ $categorias[$i] }}' class="btn-laranja">{{ $categorias[$i] }}</button>
                     @endif
                 @endif
-            </div>    
+            </div>
         @endfor
     </div>
 </div>

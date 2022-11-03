@@ -3,11 +3,8 @@
 @include('base.header', ['title' => 'Magazine João'])
 <body>
 
-    @include('cabecalho')
-    @include('barra')
-    @include('modalMenu')
-    @include('modalUsuario')
-    @include('cards')
+    @include('cabecalhoForm')
+    @include('login')
     @include('base.footer')
 
 </body>

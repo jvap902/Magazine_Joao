@@ -1,35 +1,44 @@
-var modal = document.getElementById("modalMenu");
+// tela principal - ainda tem o erro das modais estarem estranhas
+var modalMenu = document.getElementById("modalMenu");
+
+var modalUsuario = document.getElementById("modalUsuario");
 
 var menu = document.getElementById("menu");
 
-var span = document.getElementsByClassName("close")[0];
-
-var body = document.getElementsByTagName('body');
+var usuario = document.getElementById("usuario");
 
 menu.onclick = function() {
-  if (modal.style.display == "block") {
-    modal.style.display = "none"
+  if (modalMenu.style.display == "block") {
+    modalMenu.style.display = "none"
   } else {
-    modal.style.display = "block"
+    modalMenu.style.display = "block"
   }
-  modal.style.marginTop = (document.getElementById('barra').getBoundingClientRect().bottom - 1) + 'px'
+  modalMenu.style.marginTop = (document.getElementById('barra').getBoundingClientRect().bottom - 1) + 'px'
 }
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
+usuario.onclick = function() {
+    if (modalUsuario.style.display == "block") {
+      modalUsuario.style.display = "none"
+    } else {
+      modalUsuario.style.display = "block"
+    }
+    modalUsuario.style.marginTop = (document.getElementById('cabecalho').getBoundingClientRect().bottom - 1) + 'px'
+  }
 
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == modalMenu) {
+    modalMenu.style.display = "none";
+  }
+  if (event.target == modalUsuario) {
+    modalUsuario.style.display = "none";
   }
 }
 
-function calcPostion () {
-  modal.style.marginTop = (document.getElementById('barra').getBoundingClientRect().bottom - 1) + 'px'
+function calcPosition () {
+  modalMenu.style.marginTop = (document.getElementById('barra').getBoundingClientRect().bottom - 1) + 'px';
+  modalUsuario.style.marginTop = (document.getElementById('cabecalho').getBoundingClientRect().bottom - 1) + 'px';
 }
 window.addEventListener('resize', calcPosition);
 
-body.onscroll = function () {
-  modal.style.display = "none"
-}
+// tela de login
+
