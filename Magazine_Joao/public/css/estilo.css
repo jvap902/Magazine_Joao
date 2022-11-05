@@ -1,6 +1,9 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
+h5{
+    color: black;
+}
 span{
     cursor: pointer;
 }
@@ -25,6 +28,8 @@ span{
 
 .login{
     width: 70%;
+    padding: 8px;
+    height: 20rem;
 }
 
 .form{
@@ -38,6 +43,7 @@ span{
     height: 2rem;
     outline: none;
     width: 100%;
+    margin: 5px 0px;
 }
 
 .logo{
@@ -51,6 +57,10 @@ span{
 
 .background-laranja{
     background-color: #ff6100 !important;
+}
+
+.background-laranja:hover{
+    background-color: white !important;
 }
 
 .border-radius-6px{
@@ -87,23 +97,55 @@ span{
     font-size: 25px;
 }
 
+.btn-submit{
+    background-color: #ff6100;
+    border-radius: 6px;
+    padding: 6px;
+    border: solid #ff6100 1px;
+}
+
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+a:hover{
+    text-decoration: underline !important;
+}
+
+.btn-submit:hover{
+    background-color: white;
+    border-radius: 6px;
+    padding: 6px;
+    border: solid black 1px;
+}
+
 .btn-laranja{
-    border: none;
+    border: solid #ff6100 1px;
     background-color: #ff6100;
 }
 
 .btn-laranja-claro{
-    border: none;
+    border: solid rgb(255, 157, 92) 1px;
     background-color:rgb(255, 157, 92);
 }
 
+.btn-laranja-claro:hover{
+    background-color: white;
+    border: solid black 1px;
+}
 .card{
     border: none !important;
+    height: 8rem;
 }
 
 .card-img-top{
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+    height: 8rem;
+    border-top: solid black 1px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
 }
 
 .card-body{

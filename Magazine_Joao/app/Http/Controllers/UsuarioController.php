@@ -54,7 +54,7 @@ class UsuarioController extends Controller
 
     function create()
     {
-        return view('usuario.create');
+        return view('usuarios.criarConta');
     }
 
     function store(Request $request)
@@ -71,6 +71,6 @@ class UsuarioController extends Controller
         Usuario::create($data);
 
         return "ok";
-        // return redirect('/usuario');
+        return redirect('/usuarios');
     }
 }

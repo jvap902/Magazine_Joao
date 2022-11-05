@@ -7,6 +7,8 @@ var menu = document.getElementById("menu");
 
 var usuario = document.getElementById("usuario");
 
+// var card = document.getElementsByClassName("card");
+
 menu.onclick = function() {
   if (modalMenu.style.display == "block") {
     modalMenu.style.display = "none"
@@ -34,11 +36,30 @@ window.onclick = function(event) {
   }
 }
 
-function calcPosition () {
-  modalMenu.style.marginTop = (document.getElementById('barra').getBoundingClientRect().bottom - 1) + 'px';
-  modalUsuario.style.marginTop = (document.getElementById('cabecalho').getBoundingClientRect().bottom - 1) + 'px';
+// card.onclick = function () {
+//     window.location.href = "/produtos/" + card.id + "/1"
+// }
+
+function redirecionaParaProduto (id) {
+    window.location.href = "/produtos/" + id + "/1"
 }
+
+// tela de login/criar conta -> altura central dos negócios n funfa
+
+positionCabecalhoEnd = document.getElementById('cabecalho').getBoundingClientRect().bottom - 1;
+viewHeight = window.innerHeight;
+contentArea = viewHeight - positionCabecalhoEnd;
+
+var telaLogin = document.getElementsByClassName('telaLogin');
+
+telaLogin.height = contentArea + 'px';
+
+// geral
+
+function calcPosition () {
+    modalMenu.style.marginTop = (document.getElementById('barra').getBoundingClientRect().bottom - 1) + 'px';
+    modalUsuario.style.marginTop = (document.getElementById('cabecalho').getBoundingClientRect().bottom - 1) + 'px';
+    telaLogin.style.height = contentArea + 'px';
+  }
+
 window.addEventListener('resize', calcPosition);
-
-// tela de login
-

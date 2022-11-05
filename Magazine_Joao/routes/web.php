@@ -28,7 +28,8 @@ Route::delete('/categorias/delete/{cat}', [CategoriaController::class, 'destroy'
 
 Route::get('/usuarios', [UsuarioController::class, 'index']);
 Route::post('/usuarios/login', [UsuarioController::class, 'login']);
-Route::post('/usuario/store', [UsuarioController::class, 'store']);
+Route::post('/usuarios/store', [UsuarioController::class, 'store']);
+Route::get('/usuarios/criarConta', [UsuarioController::class, 'create']);
 
 // Route::get('/produto/{id}', [ProdutoController::class, 'index']);
 // Route::post('/produto/{produto}', [ProdutoController::class, 'update']); //produto é id | conferir rota
