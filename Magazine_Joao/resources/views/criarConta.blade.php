@@ -1,37 +1,48 @@
 <div class="d-flex align-items-center justify-content-center telaLogin">
     <div class="login d-flex align-items-center justify-content-center borda-laranja borda-form">
         <div class="form">
-            <form name="criarConta" action="/usuarios/VER" method="POST">
+            <form name="criarConta" action="/usuarios/store" method="POST">
                 <h2>Criar Conta</h2>
+                @csrf
+                @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                @endif
                 @include('components.input', [
                     'type' => 'text',
                     'class' => 'input-form',
                     'placeholder' => 'Nome Completo',
-                    'value' => ''
-                    ])
+                    'value' => '',
+                    'name' => 'nome',
+                ])
                 @include('components.input', [
                     'type' => 'text',
                     'class' => 'input-form',
                     'placeholder' => 'CPF',
-                    'value' => ''
-                    ])
+                    'value' => '',
+                    'name' => 'CPF',
+                ])
                 @include('components.input', [
                     'type' => 'email',
                     'class' => 'input-form',
                     'placeholder' => 'Email',
-                    'value' => ''
-                    ])
+                    'value' => '',
+                    'name' => 'email',
+                ])
                 @include('components.input', [
                     'type' => 'password',
                     'class' => 'input-form',
                     'placeholder' => 'Senha',
-                    'value' => ''
-                    ])
+                    'value' => '',
+                    'name' => 'senha',
+                ])
                 @include('components.input', [
                     'type' => 'submit',
                     'class' => 'btn-submit float-end',
                     'placeholder' => '',
-                    'value' => 'Criar Conta'
+                    'value' => 'Criar Conta',
+                    'name' => 'submit',
                 ])
             </form>
         </div>
