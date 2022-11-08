@@ -8,13 +8,15 @@
                     'type' => 'email',
                     'class' => 'input-form',
                     'placeholder' => 'Email',
-                    'value' => ''
+                    'value' => '',
+                    'name' => 'email'
                     ])
                 @include('components.input', [
                     'type' => 'password',
                     'class' => 'input-form',
                     'placeholder' => 'Senha',
-                    'value' => ''
+                    'value' => '',
+                    'name' => 'senha'
                     ])
                 @include('components.input', [
                     'type' => 'submit',

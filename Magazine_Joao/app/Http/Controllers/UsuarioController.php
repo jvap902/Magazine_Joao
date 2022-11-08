@@ -38,16 +38,17 @@ class UsuarioController extends Controller
             // Tenta o login
             if (Auth::attempt($credenciais)) {
                 session()->regenerate();
-                return "ok";
+                dd("nihtorinrthoinrthoihnrt");
                 return redirect()->route('home');
             } else {
+                dd("rgoiernoierng");
                 return redirect()->route('login')->with(
                     'erro',
                     'Usuário ou senha inválidos.'
                 );
             }
         }
-        return view('welcome');
+        // return view('welcome');
     }
 
     function create()
