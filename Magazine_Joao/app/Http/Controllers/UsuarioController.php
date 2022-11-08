@@ -13,8 +13,6 @@ class UsuarioController extends Controller
     function index(Request $request)
     {
 
-        dd(csrf_token());
-
         $id = null; //ver como o id será pego
 
         $usuario = Usuario::select('nome', 'email', 'senha')
@@ -49,7 +47,7 @@ class UsuarioController extends Controller
                 );
             }
         }
-        return view('usuarios.login');
+        return view('welcome');
     }
 
     function create()
