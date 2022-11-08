@@ -1,5 +1,5 @@
 <div id="modalUsuario" class="modal">
-    <div class="background-laranja modal row">
+    <div class="background-laranja row">
       <div class="background-laranja col">
       <ul class="sem-ponto">
         {{-- @if (logado) --}}
