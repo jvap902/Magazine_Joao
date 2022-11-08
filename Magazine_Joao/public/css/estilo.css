@@ -59,10 +59,6 @@ span{
     background-color: #ff6100 !important;
 }
 
-.background-laranja:hover{
-    background-color: white !important;
-}
-
 .border-radius-6px{
     border-radius: 6px;
 }
@@ -142,7 +138,7 @@ a:hover{
 .card-img-top{
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
-    height: 8rem;
+    height: 12rem;
     border-top: solid black 1px;
     border-left: solid black 1px;
     border-right: solid black 1px;

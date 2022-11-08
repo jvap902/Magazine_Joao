@@ -13,19 +13,19 @@
                 'id' => 2,
                 'nome' => 'Tênis Fedido do VAP',
                 'preco' => '00.01',
-                'imagem' => asset('img/Magazine João.png')
+                'imagem' => asset('img/fogo-no-fogão-de-gás-sujo-da-cozinha-137827376.jpg')
             ],
             'produto3' => [
                 'id' => 3,
                 'nome' => 'Cabelo Abajur do João Ryan',
                 'preco' => '1000.99',
-                'imagem' => asset('img/Magazine João.png')
+                'imagem' => asset('img/1540916101_808551_1540923558_album_normal.jpg')
             ],
             'produto4' => [
                 'id' => 4,
                 'nome' => 'Unhas ASMR Júlia',
                 'preco' => '12999.99',
-                'imagem' => asset('img/Magazine João.png')
+                'imagem' => asset('img/EUZFG1AWsAEKSPr.jpg')
             ],
             'produto5' => [
                 'id' => 5,

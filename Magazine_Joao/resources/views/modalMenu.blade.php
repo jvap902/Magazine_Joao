@@ -1,5 +1,5 @@
 <div id="modalMenu" class="modal">
-  <div class="background-laranja modal row">
+  <div class="background-laranja row">
     <div class="background-laranja modalMenuCategorias col">
     @php
         $categorias = ['Menu', 'Esportes', 'Arte', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'Eletrodomésticos', 'ooo']

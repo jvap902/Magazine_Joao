@@ -3,6 +3,7 @@
         <div class="form">
             <form name="login" action="/usuarios/login" method="POST">
                 <h2>Entrar</h2>
+                @csrf
                 @include('components.input', [
                     'type' => 'email',
                     'class' => 'input-form',
