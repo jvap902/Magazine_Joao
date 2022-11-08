@@ -35,13 +35,24 @@ class UsuarioController extends Controller
                 'senha' => ['required'],
             ]);
 
+            //  $us = Usuario::first()->where(['email' => $credenciais['email']]);
+
+            //  dd (Auth::attempt($credenciais));
+            // // dd($credenciais);
+            // dd($us->getModel()->getAuthPassword());
+
+            // $credenciais['password'] = $credenciais['senha'];
+            // unset($credenciais['senha']);
+
+            // dd(Auth::attempt($credenciais));
+
             // Tenta o login
             if (Auth::attempt($credenciais)) {
                 session()->regenerate();
-                dd("nihtorinrthoinrthoihnrt");
+                dd("tudo certo");
                 return redirect()->route('home');
             } else {
-                dd("rgoiernoierng");
+                dd("credenciais erradas");
                 return redirect()->route('login')->with(
                     'erro',
                     'Usuário ou senha inválidos.'
@@ -61,15 +72,15 @@ class UsuarioController extends Controller
         $data = $request->validate([
             'nome' => 'required|max:255',
             'email' => 'required|unique:usuarios',
-            'senha' => 'required|min_digits:8',
+            'senha' => 'required|min:8',
             'CPF' => 'required|unique:usuarios',
         ]);
+
 
         $data['senha'] = Hash::make($data['senha']);
 
         Usuario::create($data);
 
-        return "ok";
-        return redirect('/usuarios');
+        return redirect('/home');
     }
 }
