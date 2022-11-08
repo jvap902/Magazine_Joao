@@ -1,7 +1,7 @@
 <div class="d-flex align-items-center justify-content-center telaLogin">
     <div class="login d-flex align-items-center justify-content-center borda-laranja borda-form">
         <div class="form">
-            <form name="login" action="/usuarios/login" method="POST">
+            <form name="login" action="{{ route('usuarios.login') }}" method="POST">
                 <h2>Entrar</h2>
                 @csrf
                 @include('components.input', [

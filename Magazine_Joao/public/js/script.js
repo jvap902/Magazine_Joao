@@ -15,7 +15,7 @@ menu.onclick = function() {
   } else {
     modalMenu.style.display = "block"
   }
-  modalMenu.style.marginTop = (document.getElementById('barra').getBoundingClientRect().bottom - 1) + 'px'
+  modalMenu.style.marginTop = (document.getElementById('barra').getBoundingClientRect().bottom - 2) + 'px'
 }
 
 usuario.onclick = function() {
@@ -24,7 +24,7 @@ usuario.onclick = function() {
     } else {
       modalUsuario.style.display = "block"
     }
-    modalUsuario.style.marginTop = (document.getElementById('cabecalho').getBoundingClientRect().bottom - 1) + 'px'
+    modalUsuario.style.marginTop = (document.getElementById('cabecalho').getBoundingClientRect().bottom - 2) + 'px'
   }
 
 window.onclick = function(event) {
@@ -46,7 +46,7 @@ function redirecionaParaProduto (id) {
 
 // tela de login/criar conta -> altura central dos negócios n funfa
 
-positionCabecalhoEnd = document.getElementById('cabecalho').getBoundingClientRect().bottom - 1;
+positionCabecalhoEnd = document.getElementById('cabecalho').getBoundingClientRect().bottom - 2;
 viewHeight = window.innerHeight;
 contentArea = viewHeight - positionCabecalhoEnd;
 
@@ -57,8 +57,8 @@ telaLogin.height = contentArea + 'px';
 // geral
 
 function calcPosition () {
-    modalMenu.style.marginTop = (document.getElementById('barra').getBoundingClientRect().bottom - 1) + 'px';
-    modalUsuario.style.marginTop = (document.getElementById('cabecalho').getBoundingClientRect().bottom - 1) + 'px';
+    modalMenu.style.marginTop = (document.getElementById('barra').getBoundingClientRect().bottom - 2) + 'px';
+    modalUsuario.style.marginTop = (document.getElementById('cabecalho').getBoundingClientRect().bottom - 2) + 'px';
     telaLogin.style.height = contentArea + 'px';
   }
 
