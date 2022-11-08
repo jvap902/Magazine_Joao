@@ -15,7 +15,7 @@ class ProdutoController extends Controller
         $produtos_filho = ProdutoFilho::select('*')->where('id_pai', $id)->get();
 
 
-        return view('home.index', [
+        return view('produto.index', [
             'produto' => $produto,
             'produtos_filho' => $produtos_filho,
         ]);

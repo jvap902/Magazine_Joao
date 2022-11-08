@@ -37,22 +37,12 @@ window.onclick = function(event) {
 }
 
 // card.onclick = function () {
-//     window.location.href = "/produtos/" + card.id + "/1"
+//     window.location.href = "/produto/" + card.id + "/1"
 // }
 
-function redirecionaParaProduto (id) {
-    window.location.href = "/produtos/" + id + "/1"
-}
-
-// tela de login/criar conta -> altura central dos negócios n funfa
-
-positionCabecalhoEnd = document.getElementById('cabecalho').getBoundingClientRect().bottom - 2;
-viewHeight = window.innerHeight;
-contentArea = viewHeight - positionCabecalhoEnd;
-
-var telaLogin = document.getElementsByClassName('telaLogin');
-
-telaLogin.height = contentArea + 'px';
+// function redirecionaParaProduto (id) {
+//     window.location.href = "/produto/" + id + "/1"
+// }
 
 // geral
 
