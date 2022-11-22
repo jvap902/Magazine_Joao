@@ -8,7 +8,8 @@
             'type' => 'text',
             'class' => 'pesquisa_cabecalho',
             'placeholder' => 'Pesquisar...',
-            'value' => ''
+            'value' => '',
+            'name' => 'pesquisa_cabecalho'
             ])
         </div>
         <div class="col-2 text-end">
