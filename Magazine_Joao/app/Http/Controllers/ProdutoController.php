@@ -71,4 +71,13 @@ class ProdutoController extends Controller
     function add_child()
     {
     }
+
+    function store(Request $request){
+        $data = $request->all();
+
+        Produto::create($data);
+
+        // return "ok";
+        return view('produto.create');
+    }
 }

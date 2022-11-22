@@ -40,10 +40,9 @@ class UsuarioController extends Controller
             if (Auth::attempt($credenciais)) {
                 //session()->regenerate();
                 //dd("tudo certo");
-                return redirect()->route('home.index');
+                return redirect('/');
             } else {
-                dd("credenciais erradas");
-                return redirect()->route('login')->with(
+                return redirect('usuarios')->with(
                     'erro',
                     'Usuário ou senha inválidos.'
                 );

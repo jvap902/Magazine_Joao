@@ -30,13 +30,13 @@ class CategoriaController extends Controller
 
         Categoria::create($data);
 
-        return "ok";
-        // return view('categorias.create');
+        // return "ok";
+        return view('categorias.create');
     }
 
-    function edit()
+    function edit($id)
     {
-        $categorias = Categoria::select('*')->get();
+        $categorias = Categoria::select('*')->where('id', $id)->get();
 
         return view('categorias.edit', [
             'categorias' => $categorias,
