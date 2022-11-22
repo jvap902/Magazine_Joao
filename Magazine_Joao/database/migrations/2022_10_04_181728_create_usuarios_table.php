@@ -19,14 +19,14 @@ return new class extends Migration
             $table->id();
             $table->string("nome");
             $table->string("email");
-            $table->string("senha");
+            $table->string("password");
             $table->string("CPF");
             $table->boolean('admin')->default(0);
             $table->timestamps();
         });
 
         DB::table('usuarios')->insert([
-            ['nome' => 'joao', 'email' => 'joao.jao@gmail.com', 'senha' => Hash::make('joaojaojoao'), 'CPF' => "00000000000", 'admin' => 1],
+            ['nome' => 'joao', 'email' => 'joao.jao@gmail.com', 'password' => Hash::make('joaojaojoao'), 'CPF' => "00000000000", 'admin' => 1],
         ]);
     }
 

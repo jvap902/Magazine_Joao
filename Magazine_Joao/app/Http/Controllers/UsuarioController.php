@@ -15,7 +15,7 @@ class UsuarioController extends Controller
 
         $id = null; //ver como o id será pego
 
-        $usuario = Usuario::select('nome', 'email', 'senha')
+        $usuario = Usuario::select('nome', 'email', 'password')
             ->where('id', $id)
             ->first();
 
@@ -30,27 +30,17 @@ class UsuarioController extends Controller
         if ($form->isMethod('POST')) {
             // Se um dos campos não for preenchidos, nem tenta o login e volta
             // para a página anterior
+
             $credenciais = $form->validate([
                 'email' => ['required'],
-                'senha' => ['required'],
+                'password' => ['required'],
             ]);
-
-            //  $us = Usuario::first()->where(['email' => $credenciais['email']]);
-
-            //  dd (Auth::attempt($credenciais));
-            // // dd($credenciais);
-            // dd($us->getModel()->getAuthPassword());
-
-            // $credenciais['password'] = $credenciais['senha'];
-            // unset($credenciais['senha']);
-
-            // dd(Auth::attempt($credenciais));
 
             // Tenta o login
             if (Auth::attempt($credenciais)) {
-                session()->regenerate();
-                dd("tudo certo");
-                return redirect()->route('home');
+                //session()->regenerate();
+                //dd("tudo certo");
+                return redirect()->route('home.index');
             } else {
                 dd("credenciais erradas");
                 return redirect()->route('login')->with(
@@ -72,12 +62,12 @@ class UsuarioController extends Controller
         $data = $request->validate([
             'nome' => 'required|max:255',
             'email' => 'required|unique:usuarios',
-            'senha' => 'required|min:8',
+            'password' => 'required|min:8',
             'CPF' => 'required|unique:usuarios',
         ]);
 
 
-        $data['senha'] = Hash::make($data['senha']);
+        $data['password'] = Hash::make($data['password']);
 
         Usuario::create($data);
 

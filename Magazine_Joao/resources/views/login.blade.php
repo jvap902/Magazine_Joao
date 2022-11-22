@@ -16,7 +16,7 @@
                     'class' => 'input-form',
                     'placeholder' => 'Senha',
                     'value' => '',
-                    'name' => 'senha'
+                    'name' => 'password'
                     ])
                 @include('components.input', [
                     'type' => 'submit',
