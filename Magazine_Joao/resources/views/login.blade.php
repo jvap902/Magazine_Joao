@@ -9,21 +9,24 @@
                     'class' => 'input-form',
                     'placeholder' => 'Email',
                     'value' => '',
-                    'name' => 'email'
+                    'name' => 'email',
+                    'disabled' => 'false'
                     ])
                 @include('components.input', [
                     'type' => 'password',
                     'class' => 'input-form',
                     'placeholder' => 'Senha',
                     'value' => '',
-                    'name' => 'senha'
+                    'name' => 'senha',
+                    'disabled' => 'false'
                     ])
                 @include('components.input', [
                     'type' => 'submit',
                     'class' => 'btn-submit float-end',
                     'placeholder' => '',
                     'value' => 'Entrar',
-                    'name' => 'submit'
+                    'name' => 'submit',
+                    'disabled' => 'false'
                 ])
             </form>
         </div>

@@ -15,6 +15,7 @@
                     'placeholder' => 'Nome Completo',
                     'value' => '',
                     'name' => 'nome',
+                    'disabled' => 'false'
                 ])
                 @include('components.input', [
                     'type' => 'text',
@@ -22,6 +23,7 @@
                     'placeholder' => 'CPF',
                     'value' => '',
                     'name' => 'CPF',
+                    'disabled' => 'false'
                 ])
                 @include('components.input', [
                     'type' => 'email',
@@ -29,6 +31,7 @@
                     'placeholder' => 'Email',
                     'value' => '',
                     'name' => 'email',
+                    'disabled' => 'false'
                 ])
                 @include('components.input', [
                     'type' => 'password',
@@ -36,6 +39,7 @@
                     'placeholder' => 'Senha',
                     'value' => '',
                     'name' => 'senha',
+                    'disabled' => 'false'
                 ])
                 @include('components.input', [
                     'type' => 'submit',
@@ -43,6 +47,7 @@
                     'placeholder' => '',
                     'value' => 'Criar Conta',
                     'name' => 'submit',
+                    'disabled' => 'false'
                 ])
             </form>
         </div>

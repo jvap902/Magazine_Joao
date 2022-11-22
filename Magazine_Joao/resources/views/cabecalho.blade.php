@@ -9,7 +9,8 @@
             'class' => 'pesquisa_cabecalho',
             'placeholder' => 'Pesquisar...',
             'value' => '',
-            'name' => 'pesquisa_cabecalho'
+            'name' => 'pesquisa_cabecalho',
+            'disabled' => 'false'
             ])
         </div>
         <div class="col-2 text-end">

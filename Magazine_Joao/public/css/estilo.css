@@ -199,11 +199,17 @@ a:hover{
 }
 
 .img-produto{
-    margin-top: 10%;
+    margin-top: 35px !important;
     border: solid #ff6100 2px;
     border-radius: 8px;
-    height: 33rem;
     margin-left: 5%;
+    padding: 1%;
+    height: 33rem;
+}
+
+.foto-produto{
+    width: 100% !important;
+    height: 100% !important;
 }
 
 img {
