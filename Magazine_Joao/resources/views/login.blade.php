@@ -10,7 +10,7 @@
                     'placeholder' => 'Email',
                     'value' => '',
                     'name' => 'email',
-                    'disabled' => 'false'
+                    'disabled' => ''
                     ])
                 @include('components.input', [
                     'type' => 'password',
@@ -18,7 +18,7 @@
                     'placeholder' => 'Senha',
                     'value' => '',
                     'name' => 'password',
-                    'disabled' => 'false'
+                    'disabled' => ''
                     ])
                 @include('components.input', [
                     'type' => 'submit',
@@ -26,7 +26,7 @@
                     'placeholder' => '',
                     'value' => 'Entrar',
                     'name' => 'submit',
-                    'disabled' => 'false'
+                    'disabled' => ''
                 ])
             </form>
         </div>
