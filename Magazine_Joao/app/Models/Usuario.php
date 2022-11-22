@@ -19,7 +19,7 @@ class Usuario extends Model implements Authenticatable
     }
     public function getAuthPassword()
     {
-        return $this->senha;
+        return $this->password;
     }
     public function getRememberToken()
     {
@@ -34,7 +34,7 @@ class Usuario extends Model implements Authenticatable
     protected $fillable = [
         'nome',
         'email',
-        'senha',
+        'password',
         'CPF',
     ];
 }

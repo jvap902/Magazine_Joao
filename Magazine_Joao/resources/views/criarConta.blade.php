@@ -38,8 +38,9 @@
                     'class' => 'input-form',
                     'placeholder' => 'Senha',
                     'value' => '',
-                    'name' => 'senha',
+                    'name' => 'password',
                     'disabled' => 'false'
+
                 ])
                 @include('components.input', [
                     'type' => 'submit',
