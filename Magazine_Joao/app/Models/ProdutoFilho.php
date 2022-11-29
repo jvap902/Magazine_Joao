@@ -13,7 +13,7 @@ class ProdutoFilho extends Model
     protected $fillable = [
         'id_pai',
         'estoque',
-        'descricao',
+        'variacao',
         "active"
     ];
 }

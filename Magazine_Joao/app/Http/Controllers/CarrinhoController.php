@@ -29,13 +29,24 @@ class CarrinhoController extends Controller
         ]);
     }
 
-    function add_carrinho(Request $request)
+    function add_carrinho(Request $request, $id_pai, $id_filho)
     {
         $usuario = Auth::user();
         $data = $request->all();
 
-        Carrinho::create($data);
+        Carrinho::create([
+            'usuario_id' => $usuario,
+            'quantidade' => $data['quantidade'],
+            'produto_filho_id' => $id_filho
+        ]);
 
         return redirect("/");
+    }
+
+    function delete(Request $request){
+        $data = $request->all();
+        $id = $data['id'];
+
+        Carrinho::where('produto_filho_id', $id)->delete();
     }
 }

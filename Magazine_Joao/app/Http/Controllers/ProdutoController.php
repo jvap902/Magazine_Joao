@@ -68,16 +68,38 @@ class ProdutoController extends Controller
         }
     }
 
-    function add_child()
+    function add_child(Request $request, $id_pai, $id_filho)
     {
+        try {
+            $data = $request->all();
+
+
+            // dd($data);
+            ProdutoFilho::create([
+                'id_pai' => $id_pai,
+                'variacao' => $data['variacao'],
+                'estoque' => $data['estoque'],
+            ]);
+
+            return view('produto.index');
+
+        } catch (QueryException $e) {
+            return "EEEEEEEE" . $e;
+            return redirect("/produto/$id_pai/$id_filho")->with("erro", "Erro");
+        }
     }
 
-    function store(Request $request){
+    function create()
+    {
+        return view('produto.create');
+    }
+
+    function store(Request $request)
+    {
         $data = $request->all();
 
         Produto::create($data);
 
-        // return "ok";
         return view('produto.create');
     }
 }

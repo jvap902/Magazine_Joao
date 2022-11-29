@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('carrinho', function (Blueprint $table) {
             $table->id();
             $table->foreignId("usuario_id")->constrained("usuarios");
-            $table->foreignId("produto_id")->constrained("produtos_filho");
+            $table->foreignId("produto_filho_id")->constrained("produtos_filho");
             $table->integer("quantidade");
             $table->timestamps();
         });
