@@ -41,6 +41,8 @@ Route::post('/produto/update', [ProdutoController::class, 'update']); // no form
 Route::post('/produto/{id_pai}/{id_filho}/add_child', [ProdutoController::class, 'add_child']);
 Route::post('/produto/deactivate', [ProdutoController::class, 'deactivate']);
 Route::post('/produto/deactivate_child', [ProdutoController::class, 'deactivate_child']);
+Route::get('/produto/create', [ProdutoController::class, 'create']);
+Route::post('/produto/store', [ProdutoController::class, 'store']);
 
 Route::get('/carrinho');
 Route::post('/carrinho/{id_pai}/{id_filho}/add_carrinho', [CarrinhoController::class, 'add_carrinho']);
