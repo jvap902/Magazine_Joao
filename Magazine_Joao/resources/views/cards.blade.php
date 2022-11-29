@@ -232,7 +232,6 @@
             <img src="{{$produto['imagem']}}" class="card-img-top">
             <div class="card-body">
                 <a href="/produto/{{$produto['id']}}/1"><h5 class="card-title">{{$produto['nome']}}</h5></a>
-                <a href="#" class="btn btn-laranja float-start"><i class="bi bi-cart-plus-fill font-size-25"></i></a>
                 <h5 class="align-middle padding-16 float-end">R${{$produto['preco']}}</h5>
             </div>
         </div>

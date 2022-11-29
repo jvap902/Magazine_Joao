@@ -39,6 +39,8 @@ Route::get('/produto/{id}/{id_filho}', [ProdutoController::class, 'index']);
 Route::post('/produto/update', [ProdutoController::class, 'update']); // no form usar _method="metodo certo"
 Route::post('/produto/deactivate', [ProdutoController::class, 'deactivate']);
 Route::post('/produto/deactivate_child', [ProdutoController::class, 'deactivate_child']);
+Route::get('/produto/create', [ProdutoController::class, 'create']);
+Route::post('/produto/store', [ProdutoController::class, 'store']);
 
 Route::get('/carrinho');
 Route::post('/carrinho/add_carrinho', [CarrinhoController::class, 'add_carrinho']);

@@ -166,6 +166,7 @@ a:hover{
 
 #modalUsuario{
     width: 15%;
+    margin-left: calc(100vw - 15%);
 }
 
 .borda-preta{
