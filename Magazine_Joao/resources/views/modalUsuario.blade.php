@@ -7,7 +7,7 @@
         <li class="btn-laranja btn-menu li-menu">Sair</li>
         {{-- @elseif (naoLogado) --}}
         <li class="btn-laranja btn-menu li-menu">Cadastre-se</li>
-        <li class="btn-laranja btn-menu li-menu">Entrar</li>
+        <li class="btn-laranja btn-menu li-menu"><a href="http://127.0.0.1:8000/usuarios">Entrar</a></li>
         {{-- @endif --}}
       </ul>
       </div>
