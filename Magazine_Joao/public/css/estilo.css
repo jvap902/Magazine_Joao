@@ -208,6 +208,39 @@ a:hover{
     height: 33rem;
 }
 
+.prod-info-direita{
+    float: right;
+    width: 50% !important;
+}
+
+.prod-info-esquerda{
+    float: left;
+    width: 45% !important;
+    margin-right: auto;
+}
+
+.img-produto-info{
+    float: left;
+    width: 100%;
+}
+
+.filhos{
+    float: left;
+    margin-left: 5%;
+    margin-top: 2%;
+    width: 100%;
+}
+
+.btn-filho{
+    margin-right: 0.3rem;
+    background-color: #ff6100;
+    border-radius: 3px;
+    border-color: #ffffff00;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    height: 2rem;
+}
+
 .foto-produto{
     width: 100% !important;
     height: 100% !important;
