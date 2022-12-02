@@ -13,6 +13,14 @@ span{
     margin-right: 3px;
     height: 40px;
 }
+
+.icone-carrinho{
+    float: right;
+    width: 40px;
+    margin-right: 3px;
+    height: 40px;
+}
+
 .textarea-produto{
     resize: none;
     padding: 2px;
@@ -42,8 +50,36 @@ span{
     height: 20rem;
 }
 
+.carrinho{
+    width: 70%;
+    padding: 8px;
+    min-height: 20rem;
+    margin-bottom: 10%;
+}
+
+.infoProdutoCarrinho{
+    width: 40%;
+    padding: 8px;
+    height: 6rem;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.btn-carrinho{
+    float: right;
+    margin-right: 6px;
+}
+
+.valorTotal{
+    float: right;
+}
+
 .form{
     width: 70%;
+}
+
+.dadosCarrinho{
+    width: 90%
 }
 
 .input-form{
@@ -178,8 +214,12 @@ a:hover{
     height: 8rem;
 }
 
-.dadoUsuario{
+.dadoCarrinho{
     margin-bottom: 0px;
+}
+
+.dadoCarrinhoTitulo{
+    font-weight: bold;
 }
 
 .card-img-top{
