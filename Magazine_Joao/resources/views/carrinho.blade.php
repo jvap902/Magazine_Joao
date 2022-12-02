@@ -17,7 +17,7 @@ $valor = 649.99
 <div class="d-flex align-items-center justify-content-center telaLogin">
     <div class="carrinho d-flex align-items-center justify-content-center borda-laranja borda-form">
         <div class="dadosCarrinho">
-            <form name="carrino" action="VER" method="POST">
+            <form name="carrinho" action="VER" method="POST">
                 <div name="dadosUsuario">
                     <h2>Dados do Usuário</h2>
                     <p class="dadoCarrinho">João Victor Freitas Batistela Trindade da Silva</p> <!-- tem que ver como receber do Backend -->
