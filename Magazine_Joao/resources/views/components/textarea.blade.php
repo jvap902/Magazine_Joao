@@ -1,1 +1,1 @@
-<textarea type="{{ $type }}" name="{{ $name }}" class="{{ $class }}" placeholder="{{ $placeholder }}" value='{{ $value }}' {{ $disabled }}></textarea>
+<textarea id="{{ $id }}" name="{{ $name }}" class="{{ $class }}" placeholder="{{ $placeholder }}" {{ $disabled }}>{{ $value }}</textarea>

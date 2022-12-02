@@ -10,6 +10,7 @@
                     @endforeach
                 @endif
                 @include('components.input', [
+                    'id' => 'nome',
                     'type' => 'text',
                     'class' => 'input-form',
                     'placeholder' => 'Nome Completo',
@@ -18,6 +19,7 @@
                     'disabled' => ''
                 ])
                 @include('components.input', [
+                    'id' => 'cpf',
                     'type' => 'text',
                     'class' => 'input-form',
                     'placeholder' => 'CPF',
@@ -26,6 +28,7 @@
                     'disabled' => ''
                 ])
                 @include('components.input', [
+                    'id' => 'email',
                     'type' => 'email',
                     'class' => 'input-form',
                     'placeholder' => 'Email',
@@ -34,6 +37,7 @@
                     'disabled' => ''
                 ])
                 @include('components.input', [
+                    'id' => 'password',
                     'type' => 'password',
                     'class' => 'input-form',
                     'placeholder' => 'Senha',
@@ -43,6 +47,7 @@
 
                 ])
                 @include('components.input', [
+                    'id' => 'submit',
                     'type' => 'submit',
                     'class' => 'btn-submit float-end',
                     'placeholder' => '',

@@ -5,6 +5,7 @@
         </div>
         <div class="col-6">
             @include('components.input', [
+            'id' => 'pesquisa_cabecalho',
             'type' => 'text',
             'class' => 'pesquisa_cabecalho',
             'placeholder' => 'Pesquisar...',

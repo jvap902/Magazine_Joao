@@ -7,6 +7,16 @@ h5{
 span{
     cursor: pointer;
 }
+.icone{
+    width: 40px;
+    float: left;
+    margin-right: 3px;
+    height: 40px;
+}
+.textarea-produto{
+    resize: none;
+    padding: 2px;
+}
 .cabecalho{
     background-color: rgb(0, 0, 0);
 }
@@ -44,6 +54,39 @@ span{
     outline: none;
     width: 100%;
     margin: 5px 0px;
+}
+
+.input-produto{
+    background-color: transparent;
+    border: none;
+    color: black;
+    margin-bottom: 3px;
+    width: 90%;
+    margin-left: 0px !important;
+}
+
+.compra{
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+}
+
+.input-quantidade{
+    background-color: transparent;
+    border: none;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.titulo-produto{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.label-produto {
+    display: inline;
+    float: left;
+    margin-right: 3px !important;
+    margin-left: 0px !important;
 }
 
 .logo{
@@ -135,6 +178,10 @@ a:hover{
     height: 8rem;
 }
 
+.dadoUsuario{
+    margin-bottom: 0px;
+}
+
 .card-img-top{
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
@@ -205,7 +252,17 @@ a:hover{
     border-radius: 8px;
     margin-left: 5%;
     padding: 1%;
-    height: 33rem;
+    height: 28rem;
+}
+
+.info-produto{
+    margin-top: 35px !important;
+    border: none;
+    height: 28rem;
+}
+
+.texto-info-produto{
+    margin-left: 11px;
 }
 
 .prod-info-direita{
@@ -233,12 +290,17 @@ a:hover{
 
 .btn-filho{
     margin-right: 0.3rem;
-    background-color: #ff6100;
+    background-color: white;
     border-radius: 3px;
-    border-color: #ffffff00;
+    border: solid #ff6100 1px;
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
     height: 2rem;
+}
+
+.btn-filho-selected{
+    background-color: #ff6100;
+    color: black;
 }
 
 .foto-produto{

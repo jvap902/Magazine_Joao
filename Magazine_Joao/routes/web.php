@@ -44,5 +44,5 @@ Route::post('/produto/deactivate_child', [ProdutoController::class, 'deactivate_
 Route::get('/produto/create', [ProdutoController::class, 'create']);
 Route::post('/produto/store', [ProdutoController::class, 'store']);
 
-Route::get('/carrinho');
+Route::get('/carrinho', [CarrinhoController::class, 'index']);
 Route::post('/carrinho/{id_pai}/{id_filho}/add_carrinho', [CarrinhoController::class, 'add_carrinho']);

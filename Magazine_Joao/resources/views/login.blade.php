@@ -5,6 +5,7 @@
                 <h2>Entrar</h2>
                 @csrf
                 @include('components.input', [
+                    'id' => 'email',
                     'type' => 'email',
                     'class' => 'input-form',
                     'placeholder' => 'Email',
@@ -13,6 +14,7 @@
                     'disabled' => ''
                     ])
                 @include('components.input', [
+                    'id' => 'password',
                     'type' => 'password',
                     'class' => 'input-form',
                     'placeholder' => 'Senha',
@@ -21,6 +23,7 @@
                     'disabled' => ''
                     ])
                 @include('components.input', [
+                    'id' => 'submit',
                     'type' => 'submit',
                     'class' => 'btn-submit float-end',
                     'placeholder' => '',

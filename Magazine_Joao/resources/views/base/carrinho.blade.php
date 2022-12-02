@@ -7,7 +7,7 @@
     @include('barra')
     @include('modalMenu')
     @include('modalUsuario')
-    @include('produto')
+    @include('carrinho')
     @include('base.footer')
 
 </body>

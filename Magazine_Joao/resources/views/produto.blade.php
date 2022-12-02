@@ -22,9 +22,10 @@
             </div>
         </div>
         <div class="prod-info-direita">
-            <div class="info-produto">
+            <div class="info-produto img-produto">
                 <form action="/produto/update">
                     @include('components.input', [
+                        'id' => 'id',
                         'type' => 'hidden',
                         'class' => '',
                         'placeholder' => '',
@@ -33,6 +34,7 @@
                         'disabled' => $disabled,
                     ])
                     @include('components.input', [
+                        'id' => 'id-filho',
                         'type' => 'hidden',
                         'class' => '',
                         'placeholder' => '',
@@ -41,58 +43,66 @@
                         'disabled' => $disabled,
                     ])
                     @include('components.input', [
+                        'id' => 'titulo-produto',
                         'type' => 'text',
-                        'class' => 'input-produto',
+                        'class' => 'input-produto titulo-produto row',
                         'placeholder' => 'Nome do Produto',
-                        'value' => '',
+                        'value' => 'AAA',
                         'name' => 'titulo-produto',
                         'disabled' => $disabled,
                     ])
                     @include('components.input', [
+                        'id' => 'marca-produto',
                         'type' => 'text',
-                        'class' => 'input-produto',
+                        'class' => 'input-produto row',
                         'placeholder' => 'Marca do Produto',
-                        'value' => '',
+                        'value' => 'Marca: Nike',
                         'name' => 'marca-produto',
                         'disabled' => $disabled,
                     ])
-                    @include('components.textarea', [
-                        'type' => 'textarea',
-                        'class' => 'input-produto',
-                        'placeholder' => 'Descrição do Produto',
-                        'value' => '',
-                        'name' => 'descricao-produto',
-                        'disabled' => $disabled,
-                    ])
+                    {{-- @if(usuarioAdmin)
+                        @if(naoTemValor) --}}
+                        <p><span class="input-produto textarea-produto" role="textbox" contenteditable>Descrição do produto</span></p>
+                        {{-- @else
+                        <p><span class="input-produto textarea-produto" role="textbox" contenteditable>$descricao</span></p>
+                        @endif
+                    @else
+                    <p><span class="input-produto textarea-produto" disabled role="textbox" contenteditable>$descricao</span></p>
+                    @endif --}}
                     @include('components.input', [
-                        'type' => 'number',
-                        'class' => 'input-produto',
+                        'id' => 'preco-produto',
+                        'type' => 'text',
+                        'class' => 'input-produto titulo-produto',
                         'placeholder' => 'Preço do Produto',
-                        'value' => '',
+                        'value' => 'R$2,99',
                         'name' => 'preco-produto',
                         'disabled' => $disabled,
                     ])
-                    <label for="quantidade">Quantidade: </label>
+                    <label for="quantidade" class="row label-produto">Quantidade:</label>
                     @include('components.input', [
+                        'id' => 'quantidade',
                         'type' => 'number',
-                        'class' => 'input-produto',
+                        'class' => 'row',
                         'placeholder' => '',
-                        'value' => '',
+                        'value' => 2,
                         'name' => 'quantidade-produto',
-                        'disabled' => $disabled,
+                        'disabled' => false,
                     ])
+                    <div class="compra">
+                        <button type="button" class="btn-submit">Comprar</button>
+                        <a href="#" class="btn-submit d-flex align-items-center justify-content icone"><i class="bi bi-cart-plus-fill font-size-25"></i></a>
+                    </div>
+                    <p>Quantidade em estoque: {{ $produto['estoque'] }}</p>
                     @include('components.input', [
+                        'id' => 'preco-produto',
                         'type' => 'submit',
-                        'class' => 'input-produto',
+                        'class' => 'btn-submit',
                         'placeholder' => '',
                         'value' => 'Alterar Produto',
                         'name' => 'preco-produto',
                         'disabled' => '',
                     ])
-                    <a href="#" class="btn btn-laranja"><i class="bi bi-cart-plus-fill font-size-25"></i></a>
-                    <button type="button">Comprar</button>
-                    <p>Quantidade em estoque: {{ $produto['estoque'] }}</p>
-                    <a href="#" class="btn btn-laranja"><i class="bi bi-trash-fill font-size-25"></i></a>
+                    <a href="#" class="btn-submit d-flex align-items-center justify-content icone"><i class="bi bi-trash-fill font-size-25"></i></a>
             </div>
         </div>
         </form>

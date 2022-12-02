@@ -14,6 +14,7 @@ class CarrinhoController extends Controller
         $usuario = Auth::user();
 
         $itens = Carrinho::select('*')->where('usuario_id', $usuario);
+        $produtos = 'teste'; // TEM QUE TIRAR ISSO AQUI VAP, SÓ TÔ COLOCANDO PARA TESTAR
 
         $i = 0;
 
