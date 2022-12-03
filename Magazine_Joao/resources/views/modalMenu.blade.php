@@ -14,6 +14,7 @@
     <div class="background-laranja modalMenuAcoes col">
       <button class="btn-laranja-claro borda-preta btn-menu">Criar Categoria</button>
       <button class="btn-laranja-claro borda-preta btn-menu">Alterar/Excluir Categoria</button>
+      <button class="btn-laranja-claro borda-preta btn-menu">Adicionar Produto</button>
     </div>
     {{-- @endif --}}
   </div>

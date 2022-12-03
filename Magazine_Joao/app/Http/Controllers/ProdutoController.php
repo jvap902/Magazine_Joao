@@ -91,7 +91,7 @@ class ProdutoController extends Controller
 
     function create()
     {
-        return view('produto.create');
+        return view('produto.criarProduto');
     }
 
     function store(Request $request)

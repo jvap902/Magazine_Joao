@@ -34,9 +34,9 @@ class CategoriaController extends Controller
         return view('categorias.criarCategoria');
     }
 
-    function edit($id)
+    function edit()
     {
-        $categorias = Categoria::select('*')->where('id', $id)->get();
+        $categorias = Categoria::select('*')->get();
 
         return view('categorias.alterarExcluirCategoria', [
             'categorias' => $categorias,
