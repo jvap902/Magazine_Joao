@@ -25,7 +25,7 @@ $valor = 649.99
                 </div>
                 <div name="dadosCompra">
                     <h2>Informações da Compra</h2>
-                    <h1 class="valorTotal">Valor Total: R$ {{ $valor }}</h1>
+                    <h1 class="floatRight">Valor Total: R$ {{ $valor }}</h1>
                     @foreach($produtos as $produto)
                     @include('components.infoProdutoCarrinho', [
                         'produto' => $produto

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class CategoriaController extends Controller
 {
-    function index()
+    function index() // não precisa. Só o edit
     {
         $categorias = Categoria::select('*')->get();
 
@@ -21,7 +21,7 @@ class CategoriaController extends Controller
 
     function create()
     {
-        return view('categorias.create');
+        return view('categorias.criarCategoria');
     }
 
     function store(Request $request)
@@ -31,14 +31,14 @@ class CategoriaController extends Controller
         Categoria::create($data);
 
         // return "ok";
-        return view('categorias.create');
+        return view('categorias.criarCategoria');
     }
 
     function edit($id)
     {
         $categorias = Categoria::select('*')->where('id', $id)->get();
 
-        return view('categorias.edit', [
+        return view('categorias.alterarExcluirCategoria', [
             'categorias' => $categorias,
         ]);
     }
@@ -57,10 +57,10 @@ class CategoriaController extends Controller
         try {
             $cat->delete();
             return "ok";
-            return redirect ('/categorias.edit');
+            return redirect ('/categorias.alterarExcluirCategoria');
         } catch (QueryException $e){
             return "EEEEEE";
-            return redirect('/categorias.edit')->with("erro", "Erro! Há produtos nesta categoria!");
+            return redirect('/categorias.alterarExcluirCategoria')->with("erro", "Erro! Há produtos nesta categoria!");
         }
     }
 }

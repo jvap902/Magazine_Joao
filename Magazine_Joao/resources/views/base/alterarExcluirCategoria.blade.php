@@ -7,7 +7,7 @@
     @include('barra')
     @include('modalMenu')
     @include('modalUsuario')
-    @include('criarCategoria')
+    @include('alterarExcluirCategoria')
     @include('base.footer')
 
 </body>
