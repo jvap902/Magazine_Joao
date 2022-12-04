@@ -12,9 +12,9 @@ class CategoriaController extends Controller
 {
     function index() // não precisa. Só o edit
     {
-        $categorias = Categoria::select('*')->get();
+        $categorias = Categoria::select('*')->where('id', '!=', 1)->get();
 
-        return view('categorias.index', [
+        return view('categorias.alterarExcluirCategoria', [
             'categorias' => $categorias
         ]);
     }
@@ -34,9 +34,11 @@ class CategoriaController extends Controller
         return view('categorias.criarCategoria');
     }
 
-    function edit()
+    function edit(Request $request)
     {
-        $categorias = Categoria::select('*')->get();
+        $data = $request->all();
+
+        $categorias = Categoria::select('*')->where('id', $data["categoria"])->get();
 
         return view('categorias.alterarExcluirCategoria', [
             'categorias' => $categorias,
@@ -53,9 +55,11 @@ class CategoriaController extends Controller
         return "ok";
     }
 
-    function destroy(Categoria $cat){
+    function destroy(Request $request){
+        $data = $request->all();
+        $cat = $data['categoria'];
         try {
-            $cat->delete();
+            Categoria::where('id', $cat)->delete();
             return "ok";
             return redirect ('/categorias.alterarExcluirCategoria');
         } catch (QueryException $e){

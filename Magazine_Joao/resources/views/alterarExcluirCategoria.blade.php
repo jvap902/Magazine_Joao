@@ -1,4 +1,4 @@
-@php
+{{-- @php
 $categorias = [
     0 => [
         'id' => '1',
@@ -9,18 +9,23 @@ $categorias = [
         'nome' => 'Eletrodomésticos'
     ]
 ];
-@endphp
+@endphp --}}
 <div class="d-flex align-items-center justify-content-center telaLogin">
     <div class="carrinho d-flex align-items-center justify-content-center borda-laranja borda-form">
         <div class="dadosCarrinho">
-            <form name="criarCategoria" action="VER" method="POST">
+            <form name="criarCategoria" action="edit" method="POST">
                 <div name="dadosUsuario">
-                    <h2>Alterar/Excluir Categoria</h2>
-                    <select name="selectCategoria" class="input-form" id="selectCategoria">
-                        @foreach($categorias as $categoria)
-                            <option value="{{ $categoria['id'] }}">{{ $categoria['nome'] }}</option>
-                        @endforeach
-                    </select>
+                    <h2>Alterar/Excluir categoria</h2>
+                    @include('components.select', [ //F1, criei um compenente separado pro select
+                    'id' => 'alerar_categoria',
+                    'class' => 'input-form',
+                    'placeholder' => 'Categoria',
+                    'coisas' => $categorias,
+                    'name' => 'categoria', //mudei o nome de CATEGORIA para NOME para conseguir salvar no banco
+                    'disabled' => '',
+                    'label' => '',
+                    'selected' => ''
+                    ])
                 </div>
                 <div name="acoes">
                     <button type="button" class="btn-submit">Cancelar</button>

@@ -13,7 +13,7 @@ $categorias = [
 <div class="d-flex align-items-center justify-content-center telaLogin">
     <div class="carrinho d-flex align-items-center justify-content-center borda-laranja borda-form">
         <div class="dadosCarrinho">
-            <form name="criarCategoria" action="VER" method="POST">
+            <form name="criarCategoria" action="store" method="POST">
                 <div name="dadosUsuario">
                     <h2>Criar Categoria</h2>
                     @include('components.input', [
@@ -22,7 +22,7 @@ $categorias = [
                     'class' => 'input-form',
                     'placeholder' => 'Categoria',
                     'value' => '',
-                    'name' => 'categoria',
+                    'name' => 'nome',
                     'disabled' => ''
                     ])
                 </div>
