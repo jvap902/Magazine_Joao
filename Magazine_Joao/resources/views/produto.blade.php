@@ -1,16 +1,9 @@
 <div class="container-fluid">
     <div class="row g-4">
-
         @php
-            $disabled = 'disabled';
-            $produto = [
-                'id' => 1,
-                'nome' => 'Geladeira Brastemp',
-                'preco' => '5990.90',
-                'imagem' => asset('/img/fogo-no-fogão-de-gás-sujo-da-cozinha-137827376.jpg'),
-                'estoque' => 24,
-            ];
+        dd($produto);
         @endphp
+
         <div class="prod-info-esquerda">
             <div class="img-produto-info text-center img-produto">
                 <img src="{{ $produto['imagem'] }}" class="img-fluid foto-produto">
