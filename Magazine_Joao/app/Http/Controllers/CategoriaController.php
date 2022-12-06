@@ -45,15 +45,17 @@ class CategoriaController extends Controller
         ]);
     }
 
-    function update(Request $request, Categoria $cat)
+    function update(Request $request)
     {
+        $categorias = Categoria::select('*')->get();
+
         $data = $request->all();
-        dd($data);
 
-        $cat->fill($data);
-        $cat->save();
+        Categoria::where('id', $data['id_categoria'])->update('nome', $data['categoria']);
 
-        return "ok";
+        return view('categorias.alterarExcluirCategoria', [
+            'categoria' => $categorias,
+        ]);
     }
 
     function destroy(Request $request){
