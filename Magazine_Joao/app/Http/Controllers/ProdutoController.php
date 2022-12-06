@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use App\Models\Produto;
 use App\Models\ProdutoFilho;
 use Illuminate\Database\QueryException;
@@ -91,7 +92,11 @@ class ProdutoController extends Controller
 
     function create()
     {
-        return view('produto.criarProduto');
+        $categorias = Categoria::select('*')->get();
+
+        return view('produto.create', [
+            'categorias' => $categorias
+        ]);
     }
 
     function store(Request $request)
@@ -99,6 +104,12 @@ class ProdutoController extends Controller
         $data = $request->all();
 
         Produto::create($data);
+        $id_pai = Produto::select('id')->orderBy('DESC')->first();
+        ProdutoFilho::create([
+            'id_pai' => $id_pai,
+            'varicao' => 'geral',
+            'estoque' => $data['estoque'],
+        ]);
 
         return view('produto.create');
     }

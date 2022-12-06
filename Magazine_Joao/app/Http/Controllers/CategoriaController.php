@@ -38,16 +38,17 @@ class CategoriaController extends Controller
     {
         $data = $request->all();
 
-        $categorias = Categoria::select('*')->where('id', $data["categoria"])->get();
+        $categoria = Categoria::select('*')->where('id', $data["categoria"])->get();
 
-        return view('categorias.alterarExcluirCategoria', [
-            'categorias' => $categorias,
+        return view('categorias.alterarCategoria', [
+            'categoria' => $categoria,
         ]);
     }
 
     function update(Request $request, Categoria $cat)
     {
         $data = $request->all();
+        dd($data);
 
         $cat->fill($data);
         $cat->save();

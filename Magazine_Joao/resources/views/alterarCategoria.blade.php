@@ -13,18 +13,26 @@ $categorias = [
 <div class="d-flex align-items-center justify-content-center telaLogin">
     <div class="carrinho d-flex align-items-center justify-content-center borda-laranja borda-form">
         <div class="dadosCarrinho">
-            <form name="criarCategoria" action="categorias/edit" method="POST">
+            <form name="criarCategoria" action="update" method="POST">
                 <div name="dadosUsuario">
                     <h2>Alterar/Excluir categoria</h2>
-                    @include('components.select', [ //F1, criei um compenente separado pro select
+                    @include('components.input', [
+                    'id' => 'id_alterar_categoria',
+                    'class' => 'input-form',
+                    'placeholder' => '',
+                    'name' => 'id_categoria',
+                    'disabled' => '',
+                    'value' => $categoria[0]["id"],
+                    'type' => 'hidden',
+                    ])
+                    @include('components.input', [
                     'id' => 'alerar_categoria',
                     'class' => 'input-form',
                     'placeholder' => 'Categoria',
-                    'coisas' => $categorias,
-                    'name' => 'categoria', //mudei o nome de CATEGORIA para NOME para conseguir salvar no banco
+                    'name' => 'categoria',
                     'disabled' => '',
-                    'label' => '',
-                    'selected' => ''
+                    'value' => $categoria[0]["nome"],
+                    'type' => 'text',
                     ])
                 </div>
                 <div name="acoes">
