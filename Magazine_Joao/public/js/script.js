@@ -66,3 +66,12 @@ let textarea = document.querySelector(".resize-ta");
 textarea.addEventListener("keyup", () => {
   textarea.style.height = calcHeight(textarea.value) + "px";
 });
+
+function onScroll () {
+  if (modalUsuario.style.display == 'block'){
+    modalUsuario.style.display = 'none';
+  }
+  if (modalMenu.style.display == 'block'){
+    modalMenu.style.display = 'none';
+  }
+};

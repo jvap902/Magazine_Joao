@@ -94,7 +94,7 @@ class ProdutoController extends Controller
     {
         $categorias = Categoria::select('*')->get();
 
-        return view('produto.create', [
+        return view('produto.criarProduto', [
             'categorias' => $categorias
         ]);
     }

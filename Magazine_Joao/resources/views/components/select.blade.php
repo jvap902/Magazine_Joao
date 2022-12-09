@@ -1,4 +1,3 @@
-<label for="{{ $name }}" class="form-label">{{ $label }}</label>
 <select name="{{ $name }}" class="input-form" id="{{ $id }}">
     <option value="" disabled selected> Selecione a opção desejada </option>
     @foreach ($coisas as $coisa)

@@ -23,7 +23,6 @@ $categorias = [
                     'coisas' => $categorias,
                     'name' => 'categoria', //mudei o nome de CATEGORIA para NOME para conseguir salvar no banco
                     'disabled' => '',
-                    'label' => '',
                     'selected' => ''
                     ])
                 </div>

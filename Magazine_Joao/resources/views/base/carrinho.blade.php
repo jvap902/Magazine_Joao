@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 @include('base.header', ['title' => 'Magazine João'])
-<body>
+<body onscroll="onScroll()">
 
     @include('cabecalho')
     @include('barra')

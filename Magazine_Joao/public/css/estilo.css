@@ -92,6 +92,15 @@ span{
     margin: 5px 0px;
 }
 
+.label-file{
+    color: #75756d;
+    line-height: 2rem;
+}
+
+.type-file{
+    display: none;
+}
+
 .input-produto{
     background-color: transparent;
     border: none;

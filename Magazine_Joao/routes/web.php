@@ -36,7 +36,7 @@ Route::get('/usuarios/criarConta', [UsuarioController::class, 'create']);
 // Route::get('/produto/{id}', [ProdutoController::class, 'index']);
 // Route::post('/produto/{produto}', [ProdutoController::class, 'update']); //produto é id | conferir rota
 Route::get('/produto/{id}/{id_filho}', [ProdutoController::class, 'index']);
-Route::get('/produto/create', [CategoriaController::class, 'create']);
+Route::get('/produto/create', [ProdutoController::class, 'create']);
 Route::post('/produto/update', [ProdutoController::class, 'update']); // no form usar _method="metodo certo"
 Route::post('/produto/{id_pai}/{id_filho}/add_child', [ProdutoController::class, 'add_child']);
 Route::post('/produto/deactivate', [ProdutoController::class, 'deactivate']);
