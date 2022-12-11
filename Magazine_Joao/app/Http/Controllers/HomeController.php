@@ -25,7 +25,7 @@ class HomeController extends Controller
         }
 
         $produtos = Produto::select('*')->get();
-        $categorias = Categoria::select('*')->get();
+        $categorias = Categoria::select('*')->where('nome', '!=', 'desativados')->get();
 
         return view('home.index', [
             'produtos' => $produtos,

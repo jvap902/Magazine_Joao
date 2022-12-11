@@ -1,12 +1,13 @@
 <div class="container-fluid">
     <div class="row g-4">
         @php
-        dd($produto);
+            $arrayImagem = explode('\\', $produto[0]['imagem']);
+            $produto[0]['imagem'] = 'img/' . end($arrayImagem);
         @endphp
 
         <div class="prod-info-esquerda">
             <div class="img-produto-info text-center img-produto">
-                <img src="{{ $produto['imagem'] }}" class="img-fluid foto-produto">
+                <img src="{{ $produto[0]['imagem'] }}" class="img-fluid foto-produto">
             </div>
             <div class="filhos">
                 <button type="button" value="1" class="btn-filho">P</button>
@@ -91,7 +92,7 @@
                         <button type="button" class="btn-submit">Comprar</button>
                         <a href="#" class="btn-submit d-flex align-items-center justify-content icone"><i class="bi bi-cart-plus-fill font-size-25"></i></a>
                     </div>
-                    <p>Quantidade em estoque: {{ $produto['estoque'] }}</p>
+                    <p>Quantidade em estoque: {{ $produto[0]['estoque'] }}</p>
                     @include('components.input', [
                         'id' => 'preco-produto',
                         'type' => 'submit',

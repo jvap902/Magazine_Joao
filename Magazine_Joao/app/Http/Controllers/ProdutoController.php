@@ -15,7 +15,6 @@ class ProdutoController extends Controller
         $produto = Produto::select('*')->where('id', $id)->get();
         $produtos_filho = ProdutoFilho::select('*')->where('id_pai', $id)->get();
 
-
         return view('produto.index', [
             'produto' => $produto,
             'produtos_filho' => $produtos_filho,
@@ -92,7 +91,7 @@ class ProdutoController extends Controller
 
     function create()
     {
-        $categorias = Categoria::select('*')->get();
+        $categorias = Categoria::select('*')->where('nome', '!=', 'desativados')->get();
 
         return view('produto.criarProduto', [
             'categorias' => $categorias
@@ -115,7 +114,7 @@ class ProdutoController extends Controller
         $imagem = end($array);
         $path = app_path();
 
-        move_uploaded_file($_FILES['imagem']['tmp_name'], $path . "\public\img\\" . $imagem);
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $path . "\..\public\img\\" . $imagem);
 
         return redirect("/produto/create");
     }

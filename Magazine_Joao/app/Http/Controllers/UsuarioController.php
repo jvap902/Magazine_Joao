@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class UsuarioController extends Controller
 {
@@ -40,6 +41,11 @@ class UsuarioController extends Controller
             if (Auth::attempt($credenciais)) {
                 //session()->regenerate();
                 //dd("tudo certo");
+                $user = Usuario::select('admin')->where('email', $form['email'])->first();
+                $admin = $user['admin'];
+
+                $form->session()->put('admin', $admin);
+
                 return redirect('/');
             } else {
                 return redirect('usuarios')->with(
@@ -70,6 +76,17 @@ class UsuarioController extends Controller
 
         Usuario::create($data);
 
-        return redirect('/home');
+        $user = Usuario::select('admin')->where('email', $data['email'])->first();
+        $admin = $user['admin'];
+
+        $request->session()->put('admin', $admin);
+
+        return redirect('/');
+    }
+
+    function logout(Request $request){
+        $request->session()->forget('admin');
+
+        return redirect('/');
     }
 }

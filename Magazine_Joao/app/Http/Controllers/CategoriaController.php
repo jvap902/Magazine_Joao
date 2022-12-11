@@ -38,7 +38,7 @@ class CategoriaController extends Controller
     {
         $data = $request->all();
 
-        $categoria = Categoria::select('*')->where('id', $data["categoria"])->get();
+        $categoria = Categoria::select('*')->where('id', $data["categoria"])->where('nome', '!=', 'desativados')->get();
 
         return view('categorias.alterarCategoria', [
             'categoria' => $categoria,
@@ -47,7 +47,7 @@ class CategoriaController extends Controller
 
     function update(Request $request)
     {
-        $categorias = Categoria::select('*')->get();
+        $categorias = Categoria::select('*')->where('nome', '!=', 'desativados')->get();
 
         $data = $request->all();
 

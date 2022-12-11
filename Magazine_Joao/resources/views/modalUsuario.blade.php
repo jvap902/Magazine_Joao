@@ -2,13 +2,13 @@
     <div class="background-laranja row">
       <div class="background-laranja col">
       <ul class="sem-ponto">
-        {{-- @if (logado) --}}
+        @if (session('admin') === 0 || session('admin') == 1)
         <li class="btn-laranja btn-menu li-menu">Perfil</li>
-        <li class="btn-laranja btn-menu li-menu">Sair</li>
-        {{-- @elseif (naoLogado) --}}
-        <li class="btn-laranja btn-menu li-menu">Cadastre-se</li>
+        <li class="btn-laranja btn-menu li-menu"><a href="http://127.0.0.1:8000/usuarios/logout">Sair</a></li>
+        @else
+        <li class="btn-laranja btn-menu li-menu"><a href="http://127.0.0.1:8000/usuarios/criarConta">Cadastre-se</a></li>
         <li class="btn-laranja btn-menu li-menu"><a href="http://127.0.0.1:8000/usuarios">Entrar</a></li>
-        {{-- @endif --}}
+        @endif
       </ul>
       </div>
   </div>
