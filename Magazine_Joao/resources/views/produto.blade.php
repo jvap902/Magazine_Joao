@@ -25,6 +25,7 @@
                         'value' => '',
                         'name' => 'id',
                         'disabled' => $disabled,
+                        'step' => ''
                     ])
                     @include('components.input', [
                         'id' => 'id-filho',
@@ -34,6 +35,7 @@
                         'value' => '',
                         'name' => 'id-filho',
                         'disabled' => $disabled,
+                        'step' => ''
                     ])
                     @include('components.input', [
                         'id' => 'titulo-produto',
@@ -43,6 +45,7 @@
                         'value' => 'AAA',
                         'name' => 'titulo-produto',
                         'disabled' => $disabled,
+                        'step' => ''
                     ])
                     @include('components.input', [
                         'id' => 'marca-produto',
@@ -52,6 +55,7 @@
                         'value' => 'Marca: Nike',
                         'name' => 'marca-produto',
                         'disabled' => $disabled,
+                        'step' => ''
                     ])
                     {{-- @if(usuarioAdmin)
                         @if(naoTemValor) --}}
@@ -70,6 +74,7 @@
                         'value' => 'R$2,99',
                         'name' => 'preco-produto',
                         'disabled' => $disabled,
+                        'step' => 0.01
                     ])
                     <label for="quantidade" class="row label-produto">Quantidade:</label>
                     @include('components.input', [
@@ -80,6 +85,7 @@
                         'value' => 2,
                         'name' => 'quantidade-produto',
                         'disabled' => false,
+                        'step' => 1
                     ])
                     <div class="compra">
                         <button type="button" class="btn-submit">Comprar</button>
@@ -94,6 +100,7 @@
                         'value' => 'Alterar Produto',
                         'name' => 'preco-produto',
                         'disabled' => '',
+                        'step' => 0.01
                     ])
                     <a href="#" class="btn-submit d-flex align-items-center justify-content icone"><i class="bi bi-trash-fill font-size-25"></i></a>
             </div>

@@ -24,6 +24,7 @@ $categorias = [
                     'disabled' => '',
                     'value' => $categoria[0]["id"],
                     'type' => 'hidden',
+                    'step' => ''
                     ])
                     @include('components.input', [
                     'id' => 'alerar_categoria',
@@ -33,6 +34,7 @@ $categorias = [
                     'disabled' => '',
                     'value' => $categoria[0]["nome"],
                     'type' => 'text',
+                    'step' => ''
                     ])
                 </div>
                 <div name="acoes">

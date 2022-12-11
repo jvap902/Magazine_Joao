@@ -23,7 +23,8 @@ $categorias = [
                     'placeholder' => 'Categoria',
                     'value' => '',
                     'name' => 'nome',
-                    'disabled' => ''
+                    'disabled' => '',
+                    'step' => ''
                     ])
                 </div>
                 <div name="acoes">

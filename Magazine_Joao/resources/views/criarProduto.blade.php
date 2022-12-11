@@ -1,7 +1,7 @@
 <div class="d-flex align-items-center justify-content-center telaLogin">
     <div class="carrinho d-flex align-items-center justify-content-center borda-laranja borda-form">
         <div class="dadosCarrinho">
-            <form name="criarCategoria" action="VER" method="POST" enctype="multipart/form-data">
+            <form name="criarCategoria" action="store" method="POST" enctype="multipart/form-data">
                 <div name="dadosUsuario">
                     <h2>Criar Produto</h2>
                     @include('components.input', [
@@ -11,7 +11,8 @@
                     'placeholder' => '',
                     'value' => '',
                     'name' => 'id',
-                    'disabled' => ''
+                    'disabled' => '',
+                    'step' => ''
                     ])
                     @include('components.input', [
                     'id' => 'nome',
@@ -20,7 +21,8 @@
                     'placeholder' => 'Nome do Produto',
                     'value' => '',
                     'name' => 'nome',
-                    'disabled' => ''
+                    'disabled' => '',
+                    'step' => ''
                     ])
                     @include('components.input', [
                     'id' => 'marca',
@@ -29,14 +31,15 @@
                     'placeholder' => 'Marca do Produto',
                     'value' => '',
                     'name' => 'marca',
-                    'disabled' => ''
+                    'disabled' => '',
+                    'step' => ''
                     ])
                     @include('components.select', [
-                    'id' => 'categoria',
+                    'id' => 'categoria_id',
                     'class' => 'input-form',
                     'placeholder' => 'Categoria',
                     'coisas' => $categorias,
-                    'name' => 'categoria',
+                    'name' => 'categoria_id',
                     'disabled' => '',
                     'selected' => ''
                     ])
@@ -47,7 +50,8 @@
                     'placeholder' => 'Preço do Produto',
                     'value' => '',
                     'name' => 'preco',
-                    'disabled' => ''
+                    'disabled' => '',
+                    'step' => '0.01'
                     ])
                     @include('components.textarea', [
                     'id' => 'descricao',
@@ -67,21 +71,23 @@
                         'placeholder' => '',
                         'value' => '',
                         'name' => 'imagem',
-                        'disabled' => ''
+                        'disabled' => '',
+                        'step' => ''
                     ])
                     @include('components.input', [
-                    'id' => 'quantidade',
+                    'id' => 'estoque',
                     'type' => 'number',
                     'class' => 'input-form',
                     'placeholder' => 'Quantidade em Estoque',
                     'value' => '',
-                    'name' => 'quantidade',
-                    'disabled' => ''
+                    'name' => 'estoque',
+                    'disabled' => '',
+                    'step' => 1
                     ])
 
                 </div>
                 <div name="acoes">
-                    <button type="button" class="btn-submit">Cancelar</button>
+                    <button onclick="botaoVoltar()" type="button" class="btn-submit">Cancelar</button>
                     <button type="submit" class="btn-submit floatRight">Criar</button>
                 </div>
             </form>

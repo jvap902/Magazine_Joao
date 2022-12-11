@@ -12,9 +12,9 @@
     </div>
     {{-- @if (logado em adm) --}}
     <div class="background-laranja modalMenuAcoes col">
-      <button class="btn-laranja-claro borda-preta btn-menu">Criar Categoria</button>
-      <button class="btn-laranja-claro borda-preta btn-menu">Alterar/Excluir Categoria</button>
-      <button class="btn-laranja-claro borda-preta btn-menu">Adicionar Produto</button>
+      <button onclick="criarCategoria()" class="btn-laranja-claro borda-preta btn-menu">Criar Categoria</button>
+      <button onclick="alterarExcluirCategoria()" class="btn-laranja-claro borda-preta btn-menu">Alterar/Excluir Categoria</button>
+      <button onclick="adicionarProduto()" class="btn-laranja-claro borda-preta btn-menu">Adicionar Produto</button>
     </div>
     {{-- @endif --}}
   </div>

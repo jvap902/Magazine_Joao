@@ -11,7 +11,8 @@
             'placeholder' => 'Pesquisar...',
             'value' => '',
             'name' => 'pesquisa_cabecalho',
-            'disabled' => ''
+            'disabled' => '',
+            'step' => ''
             ])
         </div>
         <div class="col-2 text-end">

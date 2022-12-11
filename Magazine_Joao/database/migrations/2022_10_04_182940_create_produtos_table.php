@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string("nome");
             $table->string("marca");
             $table->string("descricao");
-            $table->integer("estoque");
             $table->float("preco");
             $table->foreignId('categoria_id')->constrained('categorias');
             $table->string("imagem"); //aqui vem o link para a imagem

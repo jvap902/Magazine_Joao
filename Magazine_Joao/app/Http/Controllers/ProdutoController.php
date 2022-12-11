@@ -104,13 +104,19 @@ class ProdutoController extends Controller
         $data = $request->all();
 
         Produto::create($data);
-        $id_pai = Produto::select('id')->orderBy('DESC')->first();
+        $pai = Produto::select('id')->orderBy('id', 'DESC')->first();
         ProdutoFilho::create([
-            'id_pai' => $id_pai,
-            'varicao' => 'geral',
+            'id_pai' => $pai->id,
+            'variacao' => 'geral',
             'estoque' => $data['estoque'],
         ]);
 
-        return view('produto.create');
+        $array = explode('\\', $request->imagem->getRealPath());
+        $imagem = end($array);
+        $path = app_path();
+
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $path . "\public\img\\" . $imagem);
+
+        return redirect("/produto/create");
     }
 }

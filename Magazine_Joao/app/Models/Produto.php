@@ -13,7 +13,6 @@ class Produto extends Model
         "nome",
         "descricao",
         "marca",
-        "estoque",
         "preco",
         "categoria_id",
         "imagem",

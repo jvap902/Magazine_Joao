@@ -75,3 +75,19 @@ function onScroll () {
     modalMenu.style.display = 'none';
   }
 };
+
+function adicionarProduto() {
+  window.location.href = "/produto/create";
+}
+
+function alterarExcluirCategoria() {
+  window.location.href = "categorias/edit"
+}
+
+function criarCategoria() {
+  window.location.href = "categorias/create"
+}
+
+function botaoVoltar() {
+  window.location.href = "../.."
+}

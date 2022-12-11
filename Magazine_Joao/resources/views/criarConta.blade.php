@@ -16,7 +16,8 @@
                     'placeholder' => 'Nome Completo',
                     'value' => '',
                     'name' => 'nome',
-                    'disabled' => ''
+                    'disabled' => '',
+                    'step' => ''
                 ])
                 @include('components.input', [
                     'id' => 'cpf',
@@ -25,7 +26,8 @@
                     'placeholder' => 'CPF',
                     'value' => '',
                     'name' => 'CPF',
-                    'disabled' => ''
+                    'disabled' => '',
+                    'step' => ''
                 ])
                 @include('components.input', [
                     'id' => 'email',
@@ -34,7 +36,8 @@
                     'placeholder' => 'Email',
                     'value' => '',
                     'name' => 'email',
-                    'disabled' => ''
+                    'disabled' => '',
+                    'step' => ''
                 ])
                 @include('components.input', [
                     'id' => 'password',
@@ -43,7 +46,8 @@
                     'placeholder' => 'Senha',
                     'value' => '',
                     'name' => 'password',
-                    'disabled' => ''
+                    'disabled' => '',
+                    'step' => ''
 
                 ])
                 @include('components.input', [
@@ -53,7 +57,8 @@
                     'placeholder' => '',
                     'value' => 'Criar Conta',
                     'name' => 'submit',
-                    'disabled' => ''
+                    'disabled' => '',
+                    'step' => ''
                 ])
             </form>
         </div>
