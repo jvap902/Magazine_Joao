@@ -3,9 +3,9 @@
         @php
             $arrayImagem = explode('\\', $produto[0]['imagem']);
             $produto[0]['imagem'] = 'img/' . end($arrayImagem);
-            if(session('admin') !== 1){
+            if (session('admin') !== 1) {
                 $disabled = 'disabled';
-            } else{
+            } else {
                 $disabled = '';
             }
 
@@ -16,9 +16,10 @@
                 <img src="{{ asset($produto[0]['imagem']) }}" class="img-fluid foto-produto">
             </div>
             <div class="filhos">
-                <button type="button" value="1" class="btn-filho">P</button>
-                <button type="button" value="2" class="btn-filho">M</button>
-                <button type="button" value="3" class="btn-filho">G</button>
+
+                @foreach ($produtos_filho as $filho)
+                    <button type="button" value="{{ $filho['id'] }}" class="btn-filho">{{ $filho['variacao'] }}</button>
+                @endforeach
             </div>
         </div>
         <div class="prod-info-direita">
@@ -32,7 +33,7 @@
                         'value' => '',
                         'name' => 'id',
                         'disabled' => $disabled,
-                        'step' => ''
+                        'step' => '',
                     ])
                     @include('components.input', [
                         'id' => 'id-filho',
@@ -42,7 +43,7 @@
                         'value' => '',
                         'name' => 'id-filho',
                         'disabled' => $disabled,
-                        'step' => ''
+                        'step' => '',
                     ])
                     @include('components.input', [
                         'id' => 'titulo-produto',
@@ -52,9 +53,9 @@
                         'value' => $produto[0]['nome'],
                         'name' => 'titulo-produto',
                         'disabled' => $disabled,
-                        'step' => ''
+                        'step' => '',
                     ])
-                    @if(session('admin') === 1)
+                    @if (session('admin') === 1)
                         @include('components.input', [
                             'id' => 'marca-produto',
                             'type' => 'text',
@@ -63,10 +64,10 @@
                             'value' => $produto[0]['marca'],
                             'name' => 'marca-produto',
                             'disabled' => $disabled,
-                            'step' => ''
+                            'step' => '',
                         ])
                     @else
-                    @include('components.input', [
+                        @include('components.input', [
                             'id' => 'marca-produto',
                             'type' => 'text',
                             'class' => 'input-produto row',
@@ -74,17 +75,20 @@
                             'value' => 'Marca: ' . $produto[0]['marca'],
                             'name' => 'marca-produto',
                             'disabled' => $disabled,
-                            'step' => ''
+                            'step' => '',
                         ])
                     @endif
-                    @if(session('admin') === 1)
-                        @if($produto[0]['descricao'] == "")
-                        <p><span class="input-produto textarea-produto" role="textbox" contenteditable>Descrição do produto</span></p>
+                    @if (session('admin') === 1)
+                        @if ($produto[0]['descricao'] == '')
+                            <p><span class="input-produto textarea-produto" role="textbox" contenteditable>Descrição do
+                                    produto</span></p>
                         @else
-                        <p><span class="input-produto textarea-produto" role="textbox" contenteditable>{{$produto[0]['descricao']}}</span></p>
+                            <p><span class="input-produto textarea-produto" role="textbox"
+                                    contenteditable>{{ $produto[0]['descricao'] }}</span></p>
                         @endif
                     @else
-                    <p><span class="input-produto textarea-produto" role="textbox">{{$produto[0]['descricao']}}</span></p>
+                        <p><span class="input-produto textarea-produto"
+                                role="textbox">{{ $produto[0]['descricao'] }}</span></p>
                     @endif
                     @include('components.input', [
                         'id' => 'preco-produto',
@@ -94,7 +98,7 @@
                         'value' => 'R$' . $produto[0]['preco'],
                         'name' => 'preco-produto',
                         'disabled' => $disabled,
-                        'step' => 0.01
+                        'step' => 0.01,
                     ])
                     <label for="quantidade" class="row label-produto">Quantidade:</label>
                     @include('components.input', [
@@ -105,13 +109,14 @@
                         'value' => 0,
                         'name' => 'quantidade-produto',
                         'disabled' => false,
-                        'step' => 1
+                        'step' => 1,
                     ])
                     <div class="compra">
                         <button type="button" class="btn-submit">Comprar</button>
-                        <a href="#" class="btn-submit d-flex align-items-center justify-content icone"><i class="bi bi-cart-plus-fill font-size-25"></i></a>
+                        <a href="#" class="btn-submit d-flex align-items-center justify-content icone"><i
+                                class="bi bi-cart-plus-fill font-size-25"></i></a>
                     </div>
-                    @if(session('admin') === 1)
+                    @if (session('admin') === 1)
                         <p>Quantidade em estoque: {{ $produtos_filho[0]['estoque'] }}</p>
                         @include('components.input', [
                             'id' => 'preco-produto',
@@ -121,9 +126,10 @@
                             'value' => 'Alterar Produto',
                             'name' => 'preco-produto',
                             'disabled' => '',
-                            'step' => 0.01
+                            'step' => 0.01,
                         ])
-                        <a href="#" class="btn-submit d-flex align-items-center justify-content icone"><i class="bi bi-trash-fill font-size-25"></i></a>
+                        <a href="#" class="btn-submit d-flex align-items-center justify-content icone"><i
+                                class="bi bi-trash-fill font-size-25"></i></a>
                     @endif
             </div>
         </div>
