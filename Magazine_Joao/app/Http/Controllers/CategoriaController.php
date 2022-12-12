@@ -21,7 +21,10 @@ class CategoriaController extends Controller
 
     function create()
     {
-        return view('categorias.criarCategoria');
+        $categorias = Categoria::select('*')->where('nome', '!=', 'desativados')->get();
+        return view('categorias.criarCategoria', [
+            'categorias' => $categorias
+        ]);
     }
 
     function store(Request $request)
@@ -31,7 +34,10 @@ class CategoriaController extends Controller
         Categoria::create($data);
 
         // return "ok";
-        return view('categorias.criarCategoria');
+        $categorias = Categoria::select('*')->where('nome', '!=', 'desativados')->get();
+        return view('categorias.criarCategoria', [
+            'categorias' => $categorias
+        ]);
     }
 
     function edit(Request $request)

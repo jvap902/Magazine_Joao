@@ -8,6 +8,7 @@
             $arrayImagem = explode('\\', $produto['imagem']);
             $produto['imagem'] = 'img/' . end($arrayImagem);
         @endphp
+        @if($categoriaSelecionada === '' || $produto['categoria_id'] == $categoriaSelecionada)
         <div class="col-2 card float-start">
             <img src="{{asset($produto['imagem'])}}" class="card-img-top">
             <div class="card-body">
@@ -15,6 +16,7 @@
                 <h5 class="align-middle padding-16 float-end">R${{$produto['preco']}}</h5>
             </div>
         </div>
+        @endif
         @endforeach
     </div>
 </div>

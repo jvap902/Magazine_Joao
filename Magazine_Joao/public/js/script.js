@@ -95,5 +95,7 @@ function botaoVoltar() {
 function acessaCategoria($categoria) {
   if ($categoria == 'Menu'){
     window.location.href = "http://127.0.0.1:8000/"
+  } else {
+    window.location.href = "http://127.0.0.1:8000/?categoriaSelecionada=" + $categoria
   }
 }

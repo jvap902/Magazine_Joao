@@ -6,7 +6,10 @@
     <ul class="sem-ponto">
     <li onclick="acessaCategoria('Menu')" class="btn-laranja btn-menu li-menu">Menu</li>
     @foreach ($categorias as $categoria)
-      <li onclick="acessaCategoria('{{$categoria[`nome`]}}')" class="btn-laranja btn-menu li-menu">{{$categoria['nome']}}</li>
+    @php
+      $categoriaId = $categoria['id']
+    @endphp
+      <li onclick="acessaCategoria('{{$categoriaId}}')" class="btn-laranja btn-menu li-menu">{{$categoria['nome']}}</li>
     @endforeach
     </ul>
     </div>

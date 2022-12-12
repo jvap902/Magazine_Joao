@@ -14,10 +14,12 @@ class ProdutoController extends Controller
     { //tela com a descrição dos produtos
         $produto = Produto::select('*')->where('id', $id)->get();
         $produtos_filho = ProdutoFilho::select('*')->where('id_pai', $id)->get();
+        $categorias = Categoria::select('*')->where('nome', '!=', 'desativados')->get();
 
         return view('produto.index', [
             'produto' => $produto,
             'produtos_filho' => $produtos_filho,
+            'categorias' => $categorias
         ]);
     }
 

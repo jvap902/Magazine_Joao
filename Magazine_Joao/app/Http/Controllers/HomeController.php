@@ -26,11 +26,18 @@ class HomeController extends Controller
 
         $produtos = Produto::select('*')->get();
         $categorias = Categoria::select('*')->where('nome', '!=', 'desativados')->get();
+        
+        if(array_key_exists('categoriaSelecionada', $_GET)){
+            $categoriaSelecionada = Categoria::select('*')->where('id', $_GET['categoriaSelecionada'])->get();
+        } else{
+            $categoriaSelecionada[0]['id'] = '';
+        }
 
         return view('home.index', [
             'produtos' => $produtos,
             'categorias' => $categorias,
             'usuario' => $user,
+            'categoriaSelecionada' => $categoriaSelecionada[0]['id']
         ]);
     }
 }
