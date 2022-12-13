@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Carrinho;
 use App\Models\Produto;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
+use function PHPUnit\Framework\isNull;
 
 class CarrinhoController extends Controller
 {
@@ -13,20 +16,23 @@ class CarrinhoController extends Controller
     {
         $usuario = Auth::user();
 
-        $itens = Carrinho::select('*')->where('usuario_id', $usuario);
-        $produtos = 'teste'; // TEM QUE TIRAR ISSO AQUI VAP, SÓ TÔ COLOCANDO PARA TESTAR
-
+        $itens = Carrinho::select('*')->where('usuario_id', $usuario)->get();
+        $categorias = Categoria::select('*')->where('nome', '!=', 'desativados')->get();
         $i = 0;
+        if (!isNull($itens)) {
+            foreach ($itens as $item) {
+                $produtos[$i]['produto'] = Produto::select('*')->where('id', $item['produto_id']);
+                $produtos[$i]['quantidade'] = $item['quantidade'];
 
-        foreach ($itens as $item){
-            $produtos[$i]['produto'] = Produto::select('*')->where('id', $item['produto_id']);
-            $produtos[$i]['quantidade'] = $item['quantidade'];
-
-            $i++;
+                $i++;
+            }
+        } else {
+            $produtos = null;
         }
 
         return view('carrinho.index', [
-            'produtos' => $produtos
+            'produtos' => $produtos,
+            'categorias' => $categorias
         ]);
     }
 
@@ -44,7 +50,8 @@ class CarrinhoController extends Controller
         return redirect("/");
     }
 
-    function delete(Request $request){
+    function delete(Request $request)
+    {
         $data = $request->all();
         $id = $data['id'];
 

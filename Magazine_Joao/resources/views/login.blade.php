@@ -1,6 +1,7 @@
 <div class="d-flex align-items-center justify-content-center telaLogin">
     <div class="login d-flex align-items-center justify-content-center borda-laranja borda-form">
         <div class="form">
+            @if(session("erro")) <p>{{session("erro")}}</p>@endif
             <form name="login" action="/usuarios/login" method="POST">
                 <h2>Entrar</h2>
                 @csrf

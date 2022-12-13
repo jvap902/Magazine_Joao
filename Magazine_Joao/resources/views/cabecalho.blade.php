@@ -17,6 +17,6 @@
         </div>
         <div class="col-2 text-end">
             <i id="usuario" class="bi bi-person laranja botao mr-1"></i>
-            <i id="carrinho" class="bi bi-cart-fill laranja botao mr-1"></i>        </div>
+            <i id="carrinho" class="bi bi-cart-fill laranja botao mr-1"></i></div>
     </div>
 </div>

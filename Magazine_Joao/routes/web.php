@@ -46,4 +46,4 @@ Route::get('/produto/create', [ProdutoController::class, 'create']);
 Route::post('/produto/store', [ProdutoController::class, 'store']);
 
 Route::get('/carrinho', [CarrinhoController::class, 'index']);
-Route::post('/carrinho/{id_pai}/{id_filho}/add_carrinho', [CarrinhoController::class, 'add_carrinho']);
+Route::get('/carrinho/{id_pai}/{id_filho}/add_carrinho', [CarrinhoController::class, 'add_carrinho']);

@@ -34,20 +34,14 @@
                     $categoriaId = $categorias[$i]['id']
                 @endphp
                 <div class="col text-center font-size-12">
-                    @if ($i == 0)
-                        <div class="col text-center font-size-12">
+                    @if ($i>6)
                         <button id="{{ $categorias[$i]['nome'] }}" onclick="acessaCategoria('{{ $categoriaId }}')" class="btn-laranja .d-md-none .d-lg-block">{{ $categorias[$i]['nome'] }}</button>
-                        </div>
+                    @elseif ($i>3)
+                        <button id="{{ $categorias[$i]['nome'] }}" onclick="acessaCategoria('{{ $categoriaId }}')" class="btn-laranja .d-sm-none .d-md-block">{{ $categorias[$i]['nome'] }}</button>
                     @else
-                        @if ($i>6)
-                            <button id="{{ $categorias[$i]['nome'] }}" onclick="acessaCategoria('{{ $categoriaId }}')" class="btn-laranja .d-md-none .d-lg-block">{{ $categorias[$i]['nome'] }}</button>
-                        @elseif ($i>3)
-                            <button id="{{ $categorias[$i]['nome'] }}" onclick="acessaCategoria('{{ $categoriaId }}')" class="btn-laranja .d-sm-none .d-md-block">{{ $categorias[$i]['nome'] }}</button>
-                        @else
-                            <button id="{{ $categorias[$i]['nome'] }}" onclick="acessaCategoria('{{ $categoriaId }}')" class="btn-laranja">{{ $categorias[$i]['nome'] }}</button>
-                        @endif
-                        </div>
+                        <button id="{{ $categorias[$i]['nome'] }}" onclick="acessaCategoria('{{ $categoriaId }}')" class="btn-laranja">{{ $categorias[$i]['nome'] }}</button>
                     @endif
+                </div>
             @endfor
         @endif
     </div>

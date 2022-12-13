@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('carrinho', function (Blueprint $table) {
+        Schema::create('carrinhos', function (Blueprint $table) {
             $table->id();
             $table->foreignId("usuario_id")->constrained("usuarios");
             $table->foreignId("produto_filho_id")->constrained("produtos_filho");

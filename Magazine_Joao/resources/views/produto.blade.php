@@ -111,7 +111,7 @@
                     ])
                     <div class="compra">
                         <button type="button" class="btn-submit">Comprar</button>
-                        <a href="#" class="btn-submit d-flex align-items-center justify-content icone"><i class="bi bi-cart-plus-fill font-size-25"></i></a>
+                        <a href="http://127.0.0.1:8000/carrinho/{{$produto[0]['id']}}/{{$produtos_filho[0]['id']}}/add_carrinho" class="btn-submit d-flex align-items-center justify-content icone"><i class="bi bi-cart-plus-fill font-size-25"></i></a>
                     </div>
                     @if (session('admin') === 1)
                     <p>Quantidade em estoque: {{ $produtos_filho[0]['estoque'] }}</p>

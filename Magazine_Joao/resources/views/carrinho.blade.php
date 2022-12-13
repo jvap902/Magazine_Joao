@@ -1,19 +1,11 @@
 @php
-$produtos = [
-    'produto1' => [
-        'nome' => 'Camisa Barcelona Home 2022/23',
-        'qtd' => 'Qtde: 1',
-        'valor' => 'R$359,90'
-    ],
-    'produto2' => [
-        'nome' => 'Conjunto de Facas Tramontina Nome Super Ultra Longo',
-        'qtd' => 'Qtde: 3',
-        'valor' => 'R$10599,90'
-    ]
-];
-
-$valor = 649.99
+$valor = 0
 @endphp
+@if($produtos != null)
+@foreach($produtos as $produto)
+    $valor = $valor + $produto['valor']
+@endforeach
+@endif
 <div class="d-flex align-items-center justify-content-center telaLogin">
     <div class="carrinho d-flex align-items-center justify-content-center borda-laranja borda-form">
         <div class="dadosCarrinho">
@@ -26,14 +18,18 @@ $valor = 649.99
                 <div name="dadosCompra">
                     <h2>Informações da Compra</h2>
                     <h1 class="floatRight">Valor Total: R$ {{ $valor }}</h1>
+                    @if($produtos != null)
                     @foreach($produtos as $produto)
                     @include('components.infoProdutoCarrinho', [
                         'produto' => $produto
                     ])
                     @endforeach
+                    @else
+                    <p>Não há produtos no carrinho</p>
+                    @endif
                 </div>
                 <div name="acoes">
-                <button type="button" class="btn-submit">Cancelar</button>
+                <button type="button" onclick="botaoVoltar()" class="btn-submit">Cancelar</button>
                 <button type="button" class="btn-submit btn-carrinho">Gerar Boleto</button>
                 <button type="button" class="btn-submit btn-carrinho">PIX</button>
                 <h3 class="btn-carrinho">Confirmar compra:</h3>
