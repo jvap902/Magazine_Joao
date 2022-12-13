@@ -26,7 +26,7 @@ class ProdutoController extends Controller
     function update(Request $request, Produto $produto, ProdutoFilho $produto_filho)
     {
         $data = $request->all();
-        dd($data);
+        // dd($data);
 
         $produto->fill($data);
         $produto->save();
@@ -42,7 +42,7 @@ class ProdutoController extends Controller
             $produto_filho->save();
         }
 
-        return "ok";
+        dd( "ok");
     }
 
     function deactivate_child(Produto $produto, ProdutoFilho $produto_filho)
