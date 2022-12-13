@@ -30,7 +30,7 @@
                         'type' => 'hidden',
                         'class' => '',
                         'placeholder' => '',
-                        'value' => '',
+                        'value' => $produto[0]['id'],
                         'name' => 'id',
                         'disabled' => $disabled,
                         'step' => '',
