@@ -25,7 +25,7 @@ Route::get('/categorias', [CategoriaController::class, 'index']);
 Route::get('/categorias/create', [CategoriaController::class, 'create']);
 Route::post('/categorias/store', [CategoriaController::class, 'store']);
 Route::post('/categorias/edit', [CategoriaController::class, 'edit']); //sei que é estranho ser um post, mas é o jeito para funcionar da forma que está estruturado
-Route::post('/categorias/delete', [CategoriaController::class, 'destroy']); // mesma coisa aqui
+Route::get('/categorias/delete', [CategoriaController::class, 'destroy']); // mesma coisa aqui
 Route::post('/categorias/update', [CategoriaController::class, 'update']);
 
 Route::get('/usuarios', [UsuarioController::class, 'index']);

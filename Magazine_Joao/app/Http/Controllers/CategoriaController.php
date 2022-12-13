@@ -44,10 +44,12 @@ class CategoriaController extends Controller
     {
         $data = $request->all();
 
+        $categorias = Categoria::select('*')->where('nome', '!=', 'desativados')->get();
         $categoria = Categoria::select('*')->where('id', $data["categoria"])->where('nome', '!=', 'desativados')->get();
 
         return view('categorias.alterarCategoria', [
             'categoria' => $categoria,
+            'categorias' => $categorias
         ]);
     }
 
@@ -57,19 +59,16 @@ class CategoriaController extends Controller
 
         $data = $request->all();
 
-        Categoria::where('id', $data['id_categoria'])->update('nome', $data['categoria']);
+        Categoria::where('id', $data['id_categoria'])->update(['nome' => $data['categoria']]);
 
         return view('categorias.alterarExcluirCategoria', [
-            'categoria' => $categorias,
+            'categorias' => $categorias
         ]);
     }
 
-    function destroy(Request $request){
-        $data = $request->all();
-        $cat = $data['categoria'];
+    function destroy($id){
         try {
-            Categoria::where('id', $cat)->delete();
-            return "ok";
+            Categoria::where('id', $id)->delete();
             return redirect ('/categorias.alterarExcluirCategoria');
         } catch (QueryException $e){
             return "EEEEEE";

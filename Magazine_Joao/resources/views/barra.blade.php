@@ -26,14 +26,15 @@
                     @endif
             @endfor
         @else
+            <div class="col text-center font-size-12">
+            <button id='menu' class="btn-laranja .d-md-none .d-lg-block"><i class="menu bi bi-list text-dark"></i>Menu</button>
+            </div>
             @for ($i=0; $i < count($categorias); $i++)
                 @php
                     $categoriaId = $categorias[$i]['id']
                 @endphp
                 <div class="col text-center font-size-12">
                     @if ($i == 0)
-                        <button id='menu' class="btn-laranja .d-md-none .d-lg-block"><i class="menu bi bi-list text-dark"></i>Menu</button>
-                        </div>
                         <div class="col text-center font-size-12">
                         <button id="{{ $categorias[$i]['nome'] }}" onclick="acessaCategoria('{{ $categoriaId }}')" class="btn-laranja .d-md-none .d-lg-block">{{ $categorias[$i]['nome'] }}</button>
                         </div>

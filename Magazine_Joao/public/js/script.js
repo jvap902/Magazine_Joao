@@ -15,7 +15,7 @@ menu.onclick = function() {
   } else {
     modalMenu.style.display = "block"
   }
-  modalMenu.style.marginTop = (document.getElementById('barra').getBoundingClientRect().bottom - 2) + 'px'
+  modalMenu.style.marginTop = (document.getElementById('cabecalho').getBoundingClientRect().bottom + 30) + 'px'
 }
 
 usuario.onclick = function() {
@@ -81,7 +81,7 @@ function adicionarProduto() {
 }
 
 function alterarExcluirCategoria() {
-  window.location.href = "categorias/edit"
+  window.location.href = "categorias"
 }
 
 function criarCategoria() {

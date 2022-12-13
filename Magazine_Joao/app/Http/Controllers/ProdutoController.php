@@ -26,6 +26,7 @@ class ProdutoController extends Controller
     function update(Request $request, Produto $produto, ProdutoFilho $produto_filho)
     {
         $data = $request->all();
+        dd($data);
 
         $produto->fill($data);
         $produto->save();
