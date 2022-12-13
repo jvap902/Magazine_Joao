@@ -134,6 +134,20 @@ span{
     margin-left: 0px !important;
 }
 
+.preco-produto {
+    display: inline;
+    position: fixed;
+    margin-top: 0.1rem !important;
+    margin-right: 3px !important;
+    margin-left: 0px !important;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.preco{
+    margin-left: 2.8rem !important;
+}
+
 .logo{
     height: 2rem;
 }
